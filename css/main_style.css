@@ -1,0 +1,47 @@
+header {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+header nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+header nav div {
+  position: relative;
+}
+header nav div::before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: -3px;
+  bottom: -3px;
+  left: 0;
+  border-radius: 20%;
+}
+header nav div:hover::before {
+  width: 100%;
+  transition: 0.25s;
+}
+header nav div a {
+  font-size: 2.8rem;
+  color: white;
+  text-decoration: none;
+}
+header #logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+header #logo a {
+  font-size: 5rem;
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=main_style.css.map */
