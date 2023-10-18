@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+$font-families: (
+    'dangrek': 'Dangrek',
+    'roboto-condensed': 'RobotoCondensed',
+);
+
+$fontsizes: (
+    'point-h-01': (
+        'font-size': 6.4rem,
+        'font-weight': 400,
+        'font-family': map-get($font-families, 'dangrek'),
+    ),
+    'point-h-02': (
+        'font-size': 4.8rem,
+        'font-weight': 400,
+        'font-family': map-get($font-families, 'dangrek'),
+    ),
+    'point-h-03': (
+        'font-size': 3.6rem,
+        'font-weight': 400,
+        'font-family': map-get($font-families, 'dangrek'),
+    ),
+    'h-01': (
+        'font-size': 64px,
+        'font-weight': 700,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'h-02': (
+        'font-size': 48px,
+        'font-weight': 700,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'h-03': (
+        'font-size': 36px,
+        'font-weight': 700,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'sh-01': (
+        'font-size': 24px,
+        'font-weight': 400,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'sh-02': (
+        'font-size': 16px,
+        'font-weight': 400,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'body-01': (
+        'font-size': 16px,
+        'font-weight': 300,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+    'body-02': (
+        'font-size': 14px,
+        'font-weight': 300,
+        'font-family': map-get($font-families, 'roboto-condensed'),
+    ),
+);
+
+@mixin typograph($style) {
+    $style-info: map-get($fontsizes, $style);
+
+    @if $style-info {
+        $font-size: map-get($style-info, 'font-size');
+        $font-weight: map-get($style-info, 'font-weight');
+        $font-family: map-get($style-info, 'font-family');
+
+        font-size: $font-size;
+        font-weight: $font-weight;
+        font-family: $font-family, sans-serif;
+        @debug '#{$font-family}';
+    }
+}
