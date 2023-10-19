@@ -9,51 +9,61 @@ $fontsizes: (
     'point-h-01': (
         'font-size': 6.4rem,
         'font-weight': 400,
+        'letter-spacing': -0.192rem,
         'font-family': map-get($font-families, 'dangrek'),
     ),
     'point-h-02': (
         'font-size': 4.8rem,
         'font-weight': 400,
+        'letter-spacing': -0.144rem,
         'font-family': map-get($font-families, 'dangrek'),
     ),
     'point-h-03': (
         'font-size': 3.6rem,
         'font-weight': 400,
+        'letter-spacing': -0.108rem,
         'font-family': map-get($font-families, 'dangrek'),
     ),
     'h-01': (
         'font-size': 64px,
         'font-weight': 700,
+        'letter-spacing': -0.192rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'h-02': (
         'font-size': 48px,
         'font-weight': 700,
+        'letter-spacing': -0.144rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'h-03': (
         'font-size': 36px,
         'font-weight': 700,
+        'letter-spacing': -0.108rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'sh-01': (
         'font-size': 24px,
         'font-weight': 400,
+        'letter-spacing': -0.072rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'sh-02': (
         'font-size': 16px,
         'font-weight': 400,
+        'letter-spacing': -0.048rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'body-01': (
         'font-size': 16px,
         'font-weight': 300,
+        'letter-spacing': -0.048rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
     'body-02': (
         'font-size': 14px,
         'font-weight': 300,
+        'letter-spacing': -0.042rem,
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
 );
@@ -65,10 +75,11 @@ $fontsizes: (
         $font-size: map-get($style-info, 'font-size');
         $font-weight: map-get($style-info, 'font-weight');
         $font-family: map-get($style-info, 'font-family');
+        $letter-spacing: map-get($style-info, 'letter-spacing');
 
         font-size: $font-size;
         font-weight: $font-weight;
         font-family: $font-family, sans-serif;
-        
+        letter-spacing: $letter-spacing;
     }
 }

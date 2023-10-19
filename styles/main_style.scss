@@ -1,10 +1,42 @@
 @use './color';
 @use './font';
+@use './media_query.scss';
 
 header {
-    @include font.typograph('point-h-01');
-
-    div {
-        @include font.typograph('h-03');
+    height: 85px;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-desktop {
+        @include media_query.mobile {
+            display: none;
+        }
+    }
+    .logo-mobile {
+        @include media_query.desktop {
+            display: none;
+        }
+    }
+    nav {
+        ul {
+            @include media_query.mobile {
+                display: none;
+            }
+            text-transform: uppercase;
+            display: flex;
+            gap: 40px;
+            li {
+                a {
+                    @include font.typograph('sh-02');
+                    text-decoration: none;
+                    color: color.$white;
+                    transition: 0.25s;
+                    &:hover {
+                        color: color.$primary;
+                    }
+                }
+            }
+        }
     }
 }
