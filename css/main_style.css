@@ -16,6 +16,27 @@ header {
     display: none;
   }
 }
+@media (max-width: 600px) {
+  header .hamburger-button {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    flex-direction: column;
+  }
+  header .hamburger-button .hamburger-bar {
+    height: 4px;
+    width: 24px;
+    border-radius: 3px;
+    background-color: #dfba37;
+  }
+}
+@media (min-width: 600px) {
+  header .hamburger-button {
+    display: none;
+  }
+}
 header nav ul {
   text-transform: uppercase;
   display: flex;

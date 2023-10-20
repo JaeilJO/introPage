@@ -18,6 +18,30 @@ header {
             display: none;
         }
     }
+
+    //hamburgerMenu
+
+    .hamburger-button {
+        @include media_query.mobile {
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            flex-direction: column;
+            .hamburger-bar {
+                height: 4px;
+                width: 24px;
+                border-radius: 3px;
+                background-color: color.$primary;
+            }
+        }
+
+        @include media_query.desktop {
+            display: none;
+        }
+    }
+
     nav {
         ul {
             @include media_query.mobile {
