@@ -1,10 +1,70 @@
 @use './color';
 @use './font';
+@use './media_query.scss';
 
 header {
-    @include font.typograph('point-h-01');
+    height: 85px;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-desktop {
+        @include media_query.mobile {
+            display: none;
+        }
+    }
+    .logo-mobile {
+        @include media_query.desktop {
+            display: none;
+        }
+    }
 
-    div {
-        @include font.typograph('h-03');
+    //hamburgerMenu
+
+    .hamburger-button {
+        @include media_query.mobile {
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            flex-direction: column;
+            cursor: pointer;
+            .hamburger-bar {
+                height: 4px;
+                width: 24px;
+                border-radius: 3px;
+                background-color: color.$primary;
+            }
+            &:hover .hamburger-bar {
+                background-color: color.$primary-hover;
+            }
+        }
+
+        @include media_query.desktop {
+            display: none;
+        }
+    }
+
+    nav {
+        ul {
+            @include media_query.mobile {
+                display: none;
+            }
+            text-transform: uppercase;
+            display: flex;
+            gap: 40px;
+            li {
+                a {
+                    @include font.typograph('sh-02');
+                    text-decoration: none;
+                    color: color.$white;
+                    transition: 0.25s;
+                    &:hover {
+                        color: color.$primary;
+                    }
+                }
+            }
+        }
     }
 }

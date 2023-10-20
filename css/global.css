@@ -124,4 +124,14 @@ q:after {
   content: none;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=global.css.map */

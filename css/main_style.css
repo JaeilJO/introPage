@@ -1,47 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 header {
   height: 85px;
+  padding: 20px 32px;
   display: flex;
   justify-content: space-between;
-  padding: 0 28px;
-}
-header nav {
-  display: flex;
-  gap: 28px;
   align-items: center;
 }
-header nav div {
-  position: relative;
+@media (max-width: 600px) {
+  header .logo-desktop {
+    display: none;
+  }
 }
-header nav div::before {
-  content: "";
-  background-color: #ffffff;
-  position: absolute;
-  width: 0%;
-  height: 5px;
-  bottom: -3px;
-  bottom: -3px;
-  left: 0;
-  border-radius: 20%;
+@media (min-width: 600px) {
+  header .logo-mobile {
+    display: none;
+  }
 }
-header nav div:hover::before {
-  width: 100%;
+@media (max-width: 600px) {
+  header .hamburger-button {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  header .hamburger-button .hamburger-bar {
+    height: 4px;
+    width: 24px;
+    border-radius: 3px;
+    background-color: #dfba37;
+  }
+  header .hamburger-button:hover .hamburger-bar {
+    background-color: #f3df97;
+  }
+}
+@media (min-width: 600px) {
+  header .hamburger-button {
+    display: none;
+  }
+}
+header nav ul {
+  text-transform: uppercase;
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 600px) {
+  header nav ul {
+    display: none;
+  }
+}
+header nav ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+  text-decoration: none;
+  color: #fff;
   transition: 0.25s;
 }
-header nav div a {
-  font-size: 2.8rem;
-  color: white;
-  text-decoration: none;
-}
-header #logo {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  color: white;
-}
-header #logo a {
-  font-size: 5rem;
-  text-decoration: none;
-  color: white;
+header nav ul li a:hover {
+  color: #dfba37;
 }
 
 /*# sourceMappingURL=main_style.css.map */
