@@ -68,3 +68,34 @@ header {
         }
     }
 }
+
+#main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: color.$deep-black;
+    .main-section-contents {
+        color: color.$white;
+        text-align: center;
+        @include media_query.mobile {
+            .main-title {
+                @include font.typograph('point-h-02');
+                margin-bottom: 8px;
+            }
+            .sub-title {
+                @include font.typograph('sh-01');
+            }
+        }
+        @include media_query.desktop {
+            .main-title {
+                @include font.typograph('point-h-01');
+                margin-bottom: 16px;
+            }
+            .sub-title {
+                @include font.typograph('h-03');
+            }
+        }
+    }
+}

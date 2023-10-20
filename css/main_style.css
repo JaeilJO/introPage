@@ -64,4 +64,47 @@ header nav ul li a:hover {
   color: #dfba37;
 }
 
+#main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #282828;
+}
+#main-section .main-section-contents {
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  #main-section .main-section-contents .main-title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    margin-bottom: 8px;
+  }
+  #main-section .main-section-contents .sub-title {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
+  }
+}
+@media (min-width: 600px) {
+  #main-section .main-section-contents .main-title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.192rem;
+    margin-bottom: 16px;
+  }
+  #main-section .main-section-contents .sub-title {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.108rem;
+  }
+}
+
 /*# sourceMappingURL=main_style.css.map */
