@@ -29,11 +29,15 @@ header {
             justify-content: space-between;
             gap: 4px;
             flex-direction: column;
+            cursor: pointer;
             .hamburger-bar {
                 height: 4px;
                 width: 24px;
                 border-radius: 3px;
                 background-color: color.$primary;
+            }
+            &:hover .hamburger-bar {
+                background-color: color.$primary-hover;
             }
         }
 

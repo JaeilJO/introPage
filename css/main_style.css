@@ -24,12 +24,16 @@ header {
     justify-content: space-between;
     gap: 4px;
     flex-direction: column;
+    cursor: pointer;
   }
   header .hamburger-button .hamburger-bar {
     height: 4px;
     width: 24px;
     border-radius: 3px;
     background-color: #dfba37;
+  }
+  header .hamburger-button:hover .hamburger-bar {
+    background-color: #f3df97;
   }
 }
 @media (min-width: 600px) {
