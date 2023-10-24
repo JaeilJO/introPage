@@ -69,12 +69,15 @@ header {
     }
 }
 
+section {
+    min-height: 100vh;
+    position: relative;
+}
 #main-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    min-height: 100vh;
+
     background-color: color.$deep-black;
     .main-section-contents {
         color: color.$white;
@@ -95,6 +98,86 @@ header {
             }
             .sub-title {
                 @include font.typograph('h-03');
+            }
+        }
+    }
+}
+
+#about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media_query.mobile {
+        .about-section-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                @include font.typograph('point-h-03');
+                color: color.$white;
+                margin-bottom: 64px;
+            }
+            .about-section-contents {
+                display: flex;
+                flex-direction: column;
+                gap: 84px;
+                .about-section-content {
+                    display: flex;
+
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 20px;
+
+                    .icon-box {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 5px;
+
+                        flex-shrink: 0;
+                        background-color: color.$white;
+                    }
+                    .subscribe {
+                        color: color.$white;
+                        @include font.typograph('sh-02');
+                    }
+                }
+            }
+        }
+    }
+    @include media_query.desktop {
+        .about-section-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                @include font.typograph('point-h-01');
+                color: color.$white;
+                margin-bottom: 64px;
+            }
+            .about-section-contents {
+                display: flex;
+                flex-direction: column;
+                gap: 56px;
+                .about-section-content {
+                    display: flex;
+
+                    align-items: center;
+                    gap: 24px;
+
+                    .icon-box {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 5px;
+
+                        flex-shrink: 0;
+                        background-color: color.$white;
+                    }
+                    .subscribe {
+                        color: color.$white;
+                        @include font.typograph('sh-01');
+                    }
+                }
             }
         }
     }

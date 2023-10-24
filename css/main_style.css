@@ -64,12 +64,15 @@ header nav ul li a:hover {
   color: #dfba37;
 }
 
+section {
+  min-height: 100vh;
+  position: relative;
+}
+
 #main-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  min-height: 100vh;
   background-color: #282828;
 }
 #main-section .main-section-contents {
@@ -104,6 +107,92 @@ header nav ul li a:hover {
     font-weight: 700;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.108rem;
+  }
+}
+
+#about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  #about-section .about-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-section .about-section-wrapper .title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.108rem;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+  #about-section .about-section-wrapper .about-section-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content .icon-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    background-color: #fff;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content .subscribe {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+  }
+}
+@media (min-width: 600px) {
+  #about-section .about-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-section .about-section-wrapper .title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.192rem;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+  #about-section .about-section-wrapper .about-section-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content .icon-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    background-color: #fff;
+  }
+  #about-section .about-section-wrapper .about-section-contents .about-section-content .subscribe {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
   }
 }
 
