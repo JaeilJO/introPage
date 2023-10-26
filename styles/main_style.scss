@@ -1,184 +1,277 @@
-@use './color';
-@use './font';
-@use './media_query.scss';
+@use "./color";
+@use "./font";
+@use "./media_query.scss";
 
 header {
-    height: 85px;
-    padding: 20px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo-desktop {
-        @include media_query.mobile {
-            display: none;
-        }
+  height: 85px;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo-desktop {
+    @include media_query.mobile {
+      display: none;
     }
-    .logo-mobile {
-        @include media_query.desktop {
-            display: none;
-        }
+  }
+  .logo-mobile {
+    @include media_query.desktop {
+      display: none;
     }
+  }
 
-    //hamburgerMenu
+  //hamburgerMenu
 
-    .hamburger-button {
-        @include media_query.mobile {
-            background: none;
-            border: none;
-            display: flex;
-            justify-content: space-between;
-            gap: 4px;
-            flex-direction: column;
-            cursor: pointer;
-            .hamburger-bar {
-                height: 4px;
-                width: 24px;
-                border-radius: 3px;
-                background-color: color.$primary;
-            }
-            &:hover .hamburger-bar {
-                background-color: color.$primary-hover;
-            }
-        }
-
-        @include media_query.desktop {
-            display: none;
-        }
+  .hamburger-button {
+    @include media_query.mobile {
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+      flex-direction: column;
+      cursor: pointer;
+      .hamburger-bar {
+        height: 4px;
+        width: 24px;
+        border-radius: 3px;
+        background-color: color.$primary;
+      }
+      &:hover .hamburger-bar {
+        background-color: color.$primary-hover;
+      }
     }
 
-    nav {
-        ul {
-            @include media_query.mobile {
-                display: none;
-            }
-            text-transform: uppercase;
-            display: flex;
-            gap: 40px;
-            li {
-                a {
-                    @include font.typograph('sh-02');
-                    text-decoration: none;
-                    color: color.$white;
-                    transition: 0.25s;
-                    &:hover {
-                        color: color.$primary;
-                    }
-                }
-            }
-        }
+    @include media_query.desktop {
+      display: none;
     }
+  }
+
+  nav {
+    ul {
+      @include media_query.mobile {
+        display: none;
+      }
+      text-transform: uppercase;
+      display: flex;
+      gap: 40px;
+      li {
+        a {
+          @include font.typograph("sh-02");
+          text-decoration: none;
+          color: color.$white;
+          transition: 0.25s;
+          &:hover {
+            color: color.$primary;
+          }
+        }
+      }
+    }
+  }
 }
 
 section {
-    min-height: 100vh;
-    position: relative;
+  position: relative;
+  padding: 0px 80px;
 }
 #main-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background-color: color.$deep-black;
-    .main-section-contents {
-        color: color.$white;
-        text-align: center;
-        @include media_query.mobile {
-            .main-title {
-                @include font.typograph('point-h-02');
-                margin-bottom: 8px;
-            }
-            .sub-title {
-                @include font.typograph('sh-01');
-            }
-        }
-        @include media_query.desktop {
-            .main-title {
-                @include font.typograph('point-h-01');
-                margin-bottom: 16px;
-            }
-            .sub-title {
-                @include font.typograph('h-03');
-            }
-        }
+  background-color: color.$deep-black;
+  .main-section-contents {
+    color: color.$white;
+    text-align: center;
+    @include media_query.mobile {
+      .main-title {
+        @include font.typograph("point-h-02");
+        margin-bottom: 8px;
+      }
+      .sub-title {
+        @include font.typograph("sh-01");
+      }
     }
+    @include media_query.desktop {
+      .main-title {
+        @include font.typograph("point-h-01");
+        margin-bottom: 16px;
+      }
+      .sub-title {
+        @include font.typograph("h-03");
+      }
+    }
+  }
 }
 
 #about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include media_query.mobile {
-        .about-section-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .title {
-                @include font.typograph('point-h-03');
-                color: color.$white;
-                margin-bottom: 64px;
-            }
-            .about-section-contents {
-                display: flex;
-                flex-direction: column;
-                gap: 84px;
-                .about-section-content {
-                    display: flex;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media_query.mobile {
+    .about-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        @include font.typograph("point-h-03");
+        color: color.$white;
+        margin-bottom: 64px;
+      }
+      .about-section-contents {
+        display: flex;
+        flex-direction: column;
+        gap: 84px;
+        .about-section-content {
+          display: flex;
 
-                    align-items: center;
-                    flex-direction: column;
-                    text-align: center;
-                    gap: 20px;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
 
-                    .icon-box {
-                        width: 120px;
-                        height: 120px;
-                        border-radius: 5px;
+          .icon-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 5px;
 
-                        flex-shrink: 0;
-                        background-color: color.$white;
-                    }
-                    .subscribe {
-                        color: color.$white;
-                        @include font.typograph('sh-02');
-                    }
-                }
-            }
+            flex-shrink: 0;
+            background-color: color.$white;
+          }
+          .subscribe {
+            color: color.$white;
+            @include font.typograph("sh-02");
+          }
         }
+      }
     }
-    @include media_query.desktop {
-        .about-section-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .title {
-                @include font.typograph('point-h-01');
-                color: color.$white;
-                margin-bottom: 64px;
-            }
-            .about-section-contents {
-                display: flex;
-                flex-direction: column;
-                gap: 56px;
-                .about-section-content {
-                    display: flex;
+  }
+  @include media_query.desktop {
+    .about-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        @include font.typograph("point-h-01");
+        color: color.$white;
+        margin-bottom: 64px;
+      }
+      .about-section-contents {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        .about-section-content {
+          display: flex;
 
-                    align-items: center;
-                    gap: 24px;
+          align-items: center;
+          gap: 24px;
 
-                    .icon-box {
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 5px;
+          .icon-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
 
-                        flex-shrink: 0;
-                        background-color: color.$white;
-                    }
-                    .subscribe {
-                        color: color.$white;
-                        @include font.typograph('sh-01');
-                    }
-                }
-            }
+            flex-shrink: 0;
+            background-color: color.$white;
+          }
+          .subscribe {
+            color: color.$white;
+            @include font.typograph("sh-01");
+          }
         }
+      }
     }
+  }
+}
+
+@keyframes dash {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+#skills-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
+  background-color: color.$deep-black;
+  hr {
+    border: 1px dashed rgb(71, 71, 71);
+    width: 500px;
+    margin: 120px 0;
+  }
+  @include media_query.mobile {
+    .title {
+      @include font.typograph("point-h-03");
+      color: color.$white;
+      margin-bottom: 64px;
+    }
+  }
+  @include media_query.desktop {
+    .title {
+      @include font.typograph("point-h-01");
+      color: color.$white;
+      margin-bottom: 64px;
+      text-align: center;
+    }
+    .skills-section-content {
+      .skills-section-content-title {
+        @include font.typograph("point-h-03");
+        color: color.$primary;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 1220px;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        li {
+          .content-item-icon-box {
+            position: relative;
+            height: 200px;
+            margin-bottom: 4px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover .stroke {
+              width: 250px;
+            }
+
+            .icon {
+              position: relative;
+              z-index: 1;
+              width: 150px;
+              stroke: color.$white;
+              width: 120px;
+            }
+            .stroke {
+              z-index: 0;
+              top: -20px;
+              left: 45%;
+              width: 0px;
+              transform: translateX(-50%);
+              position: absolute;
+              .stroke-path {
+                fill: color.$primary;
+              }
+            }
+          }
+          .content-item-title {
+            color: color.$white;
+            text-align: center;
+            @include font.typograph("sh-01");
+          }
+        }
+      }
+    }
+  }
 }

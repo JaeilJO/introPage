@@ -65,11 +65,12 @@ header nav ul li a:hover {
 }
 
 section {
-  min-height: 100vh;
   position: relative;
+  padding: 0px 80px;
 }
 
 #main-section {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +112,7 @@ section {
 }
 
 #about-section {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,6 +191,103 @@ section {
   }
   #about-section .about-section-wrapper .about-section-contents .about-section-content .subscribe {
     color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
+  }
+}
+
+@keyframes dash {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+#skills-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
+  background-color: #282828;
+}
+#skills-section hr {
+  border: 1px dashed rgb(71, 71, 71);
+  width: 500px;
+  margin: 120px 0;
+}
+@media (max-width: 600px) {
+  #skills-section .title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.108rem;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+}
+@media (min-width: 600px) {
+  #skills-section .title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.192rem;
+    color: #fff;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+  #skills-section .skills-section-content .skills-section-content-title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.108rem;
+    color: #dfba37;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  #skills-section .skills-section-content .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1220px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box {
+    position: relative;
+    height: 200px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box:hover .stroke {
+    width: 250px;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box .icon {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    stroke: #fff;
+    width: 120px;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box .stroke {
+    z-index: 0;
+    top: -20px;
+    left: 45%;
+    width: 0px;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box .stroke .stroke-path {
+    fill: #dfba37;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-title {
+    color: #fff;
+    text-align: center;
     font-size: 24px;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
