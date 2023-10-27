@@ -112,7 +112,9 @@ section {
 }
 
 #about-section {
-  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +172,7 @@ section {
     font-family: "Dangrek", sans-serif;
     letter-spacing: -0.192rem;
     color: #fff;
-    margin-bottom: 64px;
+    margin-bottom: 80px;
   }
   #about-section .about-section-wrapper .about-section-contents {
     display: flex;
@@ -209,20 +211,20 @@ section {
   user-select: none;
 }
 #skills-section hr {
-  border: 1px dashed rgb(71, 71, 71);
-  width: 500px;
+  border: 1px dashed #474747;
+  width: 50%;
   margin: 120px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 #skills-section .title {
-  font-size: 3.6rem;
+  font-size: 6.4rem;
   font-weight: 400;
   font-family: "Dangrek", sans-serif;
-  letter-spacing: -0.108rem;
+  letter-spacing: -0.192rem;
   color: #fff;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   text-align: center;
 }
 #skills-section .skills-section-content .skills-section-content-title {
@@ -235,6 +237,15 @@ section {
   margin-bottom: 48px;
 }
 @media (max-width: 600px) {
+  #skills-section .title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+  }
   #skills-section .content-grid {
     display: grid;
     gap: 24px;
@@ -345,6 +356,220 @@ section {
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
+  }
+}
+
+#project-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
+}
+#project-section hr {
+  width: 300px;
+  margin: 200px 0;
+  border: 1px dashed #474747;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 600px) {
+  #project-section .project-section-wrapper {
+    margin-bottom: 200px;
+  }
+  #project-section .project-section-wrapper .title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.192rem;
+    color: #fff;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content.right {
+    flex-direction: row-reverse;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content.right .project-images .project-image {
+    transform: perspective(1000px) rotateY(-30deg) translateZ(100px);
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content.right .project-images .project-image:hover {
+    transform: perspective(600px) rotateY(0deg) translateZ(100px);
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content.right .project-informations .project-information {
+    text-align: right;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content.right .project-informations .project-information .used-skills {
+    flex-direction: row-reverse;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-image {
+    position: relative;
+    min-width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(30deg) translateZ(100px);
+    transition-property: translateY;
+    transition: 0.25s;
+    background-color: #fff;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-image:hover {
+    transform: perspective(600px) rotateY(0deg) translateZ(100px);
+  }
+  #project-section .project-section-wrapper .project-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+  #project-section .project-section-wrapper .project-information .project-information-title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    color: #fff;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box {
+    max-width: 300px;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .porject-information-subtitle {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
+    color: #fff;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .used-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .used-skills .used-skill {
+    background-color: #dfba37;
+    padding: 4px 8px;
+    text-align: center;
+    color: #282828;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .used-skills .used-skill:hover {
+    background-color: #f3df97;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .porjectionformation-url {
+    color: #e2e2e2;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+  }
+  #project-section .project-section-wrapper .project-information .project-infromation-box .porjectionformation-description {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+  }
+}
+@media (max-width: 600px) {
+  #project-section .project-section-wrapper {
+    margin-bottom: 200px;
+  }
+  #project-section .project-section-wrapper .title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    color: #fff;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-image {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    transition-property: translateY;
+    transition: 0.25s;
+    background-color: #fff;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-image:hover {
+    transform: translateY(-10px);
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-information-title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    color: #fff;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porject-information-subtitle {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
+    color: #fff;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .used-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .used-skills .used-skill {
+    background-color: #dfba37;
+    padding: 4px 8px;
+    text-align: center;
+    color: #282828;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .used-skills .used-skill:hover {
+    background-color: #f3df97;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porjectionformation-url {
+    color: #e2e2e2;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+  }
+  #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porjectionformation-description {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
   }
 }
 
