@@ -198,54 +198,104 @@ section {
   }
 }
 
-@keyframes dash {
-  from {
-    background-color: blue;
-  }
-  to {
-    background-color: red;
-  }
-}
 #skills-section {
   padding-top: 80px;
   padding-bottom: 80px;
   height: 100%;
   background-color: #282828;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #skills-section hr {
   border: 1px dashed rgb(71, 71, 71);
   width: 500px;
   margin: 120px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#skills-section .title {
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-family: "Dangrek", sans-serif;
+  letter-spacing: -0.108rem;
+  color: #fff;
+  margin-bottom: 64px;
+  text-align: center;
+}
+#skills-section .skills-section-content .skills-section-content-title {
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-family: "Dangrek", sans-serif;
+  letter-spacing: -0.108rem;
+  color: #dfba37;
+  text-align: center;
+  margin-bottom: 48px;
 }
 @media (max-width: 600px) {
-  #skills-section .title {
-    font-size: 3.6rem;
-    font-weight: 400;
-    font-family: "Dangrek", sans-serif;
-    letter-spacing: -0.108rem;
+  #skills-section .content-grid {
+    display: grid;
+    gap: 24px;
+    min-width: 400px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  #skills-section .content-grid li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: #333333;
+    top: 0;
+    border-radius: 4px;
+    transition: 0.25s;
+    transition-property: top;
+  }
+  #skills-section .content-grid li:hover {
+    top: -3px;
+  }
+  #skills-section .content-grid li:hover .content-item-icon-box > .icon {
+    stroke: #dfba37;
+  }
+  #skills-section .content-grid li:hover .content-item-icon-box > .fill-icon {
+    fill: #dfba37;
+  }
+  #skills-section .content-grid li .content-item-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+  #skills-section .content-grid li .content-item-icon-box .icon {
+    transition: 0.25s;
+    transition-property: stroke;
+    position: relative;
+    z-index: 1;
+    stroke: #fff;
+  }
+  #skills-section .content-grid li .content-item-icon-box .stroke {
+    display: none;
+  }
+  #skills-section .content-grid li .content-item-title {
     color: #fff;
-    margin-bottom: 64px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.072rem;
+  }
+}
+@keyframes fillAnimation {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 @media (min-width: 600px) {
-  #skills-section .title {
-    font-size: 6.4rem;
-    font-weight: 400;
-    font-family: "Dangrek", sans-serif;
-    letter-spacing: -0.192rem;
-    color: #fff;
-    margin-bottom: 64px;
-    text-align: center;
-  }
-  #skills-section .skills-section-content .skills-section-content-title {
-    font-size: 3.6rem;
-    font-weight: 400;
-    font-family: "Dangrek", sans-serif;
-    letter-spacing: -0.108rem;
-    color: #dfba37;
-    text-align: center;
-    margin-bottom: 48px;
-  }
   #skills-section .skills-section-content .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -265,25 +315,28 @@ section {
     align-items: center;
   }
   #skills-section .skills-section-content .content-grid li .content-item-icon-box:hover .stroke {
-    width: 250px;
+    display: block;
+  }
+  #skills-section .skills-section-content .content-grid li .content-item-icon-box:hover .stroke .stroke-path {
+    animation: fillAnimation 0.35s cubic-bezier(0.85, -0.01, 0.23, 1) forwards;
   }
   #skills-section .skills-section-content .content-grid li .content-item-icon-box .icon {
     position: relative;
     z-index: 1;
-    width: 150px;
     stroke: #fff;
     width: 120px;
   }
   #skills-section .skills-section-content .content-grid li .content-item-icon-box .stroke {
     z-index: 0;
     top: -20px;
-    left: 45%;
-    width: 0px;
+    left: 50%;
+    width: 250px;
     transform: translateX(-50%);
     position: absolute;
   }
   #skills-section .skills-section-content .content-grid li .content-item-icon-box .stroke .stroke-path {
     fill: #dfba37;
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
   }
   #skills-section .skills-section-content .content-grid li .content-item-title {
     color: #fff;
