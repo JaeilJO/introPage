@@ -112,7 +112,9 @@ section {
 }
 
 #about-section {
-  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +172,7 @@ section {
     font-family: "Dangrek", sans-serif;
     letter-spacing: -0.192rem;
     color: #fff;
-    margin-bottom: 64px;
+    margin-bottom: 80px;
   }
   #about-section .about-section-wrapper .about-section-contents {
     display: flex;
@@ -209,20 +211,20 @@ section {
   user-select: none;
 }
 #skills-section hr {
-  border: 1px dashed rgb(71, 71, 71);
-  width: 500px;
+  border: 1px dashed #474747;
+  width: 50%;
   margin: 120px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 #skills-section .title {
-  font-size: 3.6rem;
+  font-size: 6.4rem;
   font-weight: 400;
   font-family: "Dangrek", sans-serif;
-  letter-spacing: -0.108rem;
+  letter-spacing: -0.192rem;
   color: #fff;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   text-align: center;
 }
 #skills-section .skills-section-content .skills-section-content-title {
@@ -235,6 +237,15 @@ section {
   margin-bottom: 48px;
 }
 @media (max-width: 600px) {
+  #skills-section .title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+  }
   #skills-section .content-grid {
     display: grid;
     gap: 24px;

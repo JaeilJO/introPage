@@ -105,7 +105,9 @@ section {
 }
 
 #about-section {
-    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +157,7 @@ section {
             .title {
                 @include font.typograph('point-h-01');
                 color: color.$white;
-                margin-bottom: 64px;
+                margin-bottom: 80px;
             }
             .about-section-contents {
                 display: flex;
@@ -198,7 +200,7 @@ section {
     //구분선
     hr {
         border: 1px dashed color.$hr-color;
-        width: 500px;
+        width: 50%;
         margin: 120px 0;
         position: relative;
         left: 50%;
@@ -206,9 +208,9 @@ section {
     }
 
     .title {
-        @include font.typograph('point-h-03');
+        @include font.typograph('point-h-01');
         color: color.$white;
-        margin-bottom: 64px;
+        margin-bottom: 80px;
         text-align: center;
     }
     .skills-section-content {
@@ -222,6 +224,12 @@ section {
 
     //skill section mobile version
     @include media_query.mobile {
+        .title {
+            @include font.typograph('point-h-02');
+            color: color.$white;
+            margin-bottom: 40px;
+            text-align: center;
+        }
         .content-grid {
             display: grid;
             gap: 24px;
