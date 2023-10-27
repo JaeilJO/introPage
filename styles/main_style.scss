@@ -197,7 +197,7 @@ section {
 
     //구분선
     hr {
-        border: 1px dashed rgb(71, 71, 71);
+        border: 1px dashed color.$hr-color;
         width: 500px;
         margin: 120px 0;
         position: relative;
