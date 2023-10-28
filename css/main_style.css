@@ -573,4 +573,105 @@ section {
   }
 }
 
+#contect-section {
+  padding: 80px;
+  background-color: #282828;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#contect-section .contect-section-contents {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  #contect-section .contect-section-contents {
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+  }
+  #contect-section .contect-section-contents .contect-section-content-title .title {
+    font-size: 4.8rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.144rem;
+    text-align: center;
+  }
+  #contect-section .contect-section-contents .contect-section-content-title .subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+    text-align: center;
+  }
+  #contect-section .contect-section-contents .contect-section-content-form {
+    width: 100%;
+  }
+}
+#contect-section .contect-section-contents .contect-section-content-title {
+  flex-grow: 1;
+}
+#contect-section .contect-section-contents .contect-section-content-title .title {
+  font-size: 6.4rem;
+  font-weight: 400;
+  font-family: "Dangrek", sans-serif;
+  letter-spacing: -0.192rem;
+  color: white;
+  margin-bottom: 26px;
+}
+#contect-section .contect-section-contents .contect-section-content-title .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+  color: #dfba37;
+}
+#contect-section .contect-section-contents .contect-section-content-form {
+  flex-grow: 1;
+}
+#contect-section .contect-section-contents .contect-section-content-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#contect-section .contect-section-contents .contect-section-content-form form input,
+#contect-section .contect-section-contents .contect-section-content-form form textarea {
+  padding: 12px 20px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.072rem;
+  border-radius: 5px;
+  border: 1px solid #474747;
+  background: none;
+  color: white;
+}
+#contect-section .contect-section-contents .contect-section-content-form form input::placeholder,
+#contect-section .contect-section-contents .contect-section-content-form form textarea::placeholder {
+  color: #474747;
+}
+#contect-section .contect-section-contents .contect-section-content-form form input:focus,
+#contect-section .contect-section-contents .contect-section-content-form form textarea:focus {
+  outline: none;
+}
+#contect-section .contect-section-contents .contect-section-content-form form textarea {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+}
+#contect-section .contect-section-contents .contect-section-content-form form button {
+  border: none;
+  background-color: #dfba37;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.072rem;
+  color: #282828;
+  padding: 12px 0;
+}
+
 /*# sourceMappingURL=main_style.css.map */
