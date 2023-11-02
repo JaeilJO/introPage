@@ -1,0 +1,54 @@
+// color Platte
+$palettes: (
+    gray: (
+        100: #707070,
+        200: #5b5b5b,
+        300: #333333,
+        400: #2d2d2d,
+        500: #282828,
+        600: #232323,
+        700: #1e1e1e,
+    ),
+    white: (
+        100: #fff,
+    ),
+    yellow: (
+        100: #e8ce73,
+        200: #e5c75e,
+        300: #e2c04b,
+        400: #dfba37,
+        500: #c8a731,
+        600: #b2942c,
+        700: #9c8226,
+    ),
+    light-gray: (
+        100: #e2e2e2,
+    ),
+);
+
+//Gray Colors
+$gray-10: hsl(0, 0, 10%);
+$gray-20: hsl(0, 0, 20%);
+$gray-30: hsl(0, 0, 30%);
+$gray-40: hsl(0, 0, 40%);
+$gray-50: hsl(0, 0, 50%);
+$gray-60: hsl(0, 0, 60%);
+$gray-70: hsl(0, 0, 70%);
+$gray-80: hsl(0, 0, 80%);
+$gray-90: hsl(0, 0, 90%);
+
+//DFBA Colors
+$dfba-37: hsl(47, 72%, 55%);
+
+//function
+@function get-color($color, $shade) {
+    @return map-get(map-get($palettes, $color), $shade);
+}
+
+// used Colors
+$base-color: get-color(gray, 300);
+$base-color-darken: get-color(gray, 500);
+$white-color: get-color(white, 100);
+$primary: get-color(yellow, 400);
+$primary-hover: get-color(yellow, 100);
+$faded-color: get-color(gray, 200);
