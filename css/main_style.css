@@ -52,7 +52,7 @@ header nav ul {
   }
 }
 header nav ul li a {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
@@ -89,7 +89,7 @@ section {
     margin-bottom: 8px;
   }
   #main-section .main-section-contents .sub-title {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -104,7 +104,7 @@ section {
     margin-bottom: 16px;
   }
   #main-section .main-section-contents .sub-title {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 700;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.108rem;
@@ -154,7 +154,7 @@ section {
   }
   #about-section .about-section-wrapper .about-section-contents .about-section-content .subscribe {
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -193,7 +193,7 @@ section {
   }
   #about-section .about-section-wrapper .about-section-contents .about-section-content .subscribe {
     color: #fff;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -292,7 +292,7 @@ section {
   #skills-section .content-grid li .content-item-title {
     color: #fff;
     text-align: center;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -352,7 +352,7 @@ section {
   #skills-section .skills-section-content .content-grid li .content-item-title {
     color: #fff;
     text-align: center;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -438,7 +438,7 @@ section {
   }
   #project-section .project-section-wrapper .project-information .project-infromation-box .porject-information-subtitle {
     margin-bottom: 8px;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -455,7 +455,7 @@ section {
     text-align: center;
     color: #282828;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -469,14 +469,14 @@ section {
   }
   #project-section .project-section-wrapper .project-information .project-infromation-box .porjectionformation-url {
     color: #e2e2e2;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
   }
   #project-section .project-section-wrapper .project-information .project-infromation-box .porjectionformation-description {
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -528,7 +528,7 @@ section {
   }
   #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porject-information-subtitle {
     margin-bottom: 8px;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.072rem;
@@ -545,7 +545,7 @@ section {
     text-align: center;
     color: #282828;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -559,14 +559,14 @@ section {
   }
   #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porjectionformation-url {
     color: #e2e2e2;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
   }
   #project-section .project-section-wrapper .project-section-contents .project-information .project-infromation-box .porjectionformation-description {
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -600,7 +600,7 @@ section {
     text-align: center;
   }
   #contect-section .contect-section-contents .contect-section-content-title .subtitle {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     font-family: "RobotoCondensed", sans-serif;
     letter-spacing: -0.048rem;
@@ -622,7 +622,7 @@ section {
   margin-bottom: 26px;
 }
 #contect-section .contect-section-contents .contect-section-content-title .subtitle {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
@@ -639,7 +639,7 @@ section {
 #contect-section .contect-section-contents .contect-section-content-form form input,
 #contect-section .contect-section-contents .contect-section-content-form form textarea {
   padding: 12px 20px;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.072rem;
@@ -657,7 +657,7 @@ section {
   outline: none;
 }
 #contect-section .contect-section-contents .contect-section-content-form form textarea {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
@@ -666,7 +666,7 @@ section {
   border: none;
   background-color: #dfba37;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.072rem;
@@ -685,7 +685,7 @@ footer img {
 }
 footer .footer-description {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
@@ -702,7 +702,7 @@ footer .footer-navigation .footer-navigation {
   gap: 10%;
 }
 footer .footer-navigation .footer-navigation .footer-navigation-anchor a {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
