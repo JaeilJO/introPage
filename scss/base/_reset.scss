@@ -1,4 +1,7 @@
-html,
+html {
+    font-size: 62.5%;
+}
+
 body,
 div,
 span,
@@ -83,7 +86,6 @@ video {
     padding: 0;
     border: 0;
     vertical-align: baseline;
-    font-size: 62.5%;
 }
 /* HTML5 display-role reset for older browsers */
 article,

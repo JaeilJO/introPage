@@ -1,3 +1,5 @@
+@use '../base/typography';
+
 /**
     *Media Query Mixin
 */
@@ -17,7 +19,7 @@ $breakpoint: 600px;
     *Typography Mixin
 */
 @mixin typography($style) {
-    $style-info: map-get($fontsizes, $style);
+    $style-info: map-get(typography.$fontsizes, $style);
 
     @if $style-info {
         $font-size: map-get($style-info, 'font-size');

@@ -5,6 +5,7 @@ $font-families: (
     'roboto-condensed': 'RobotoCondensed',
 );
 
+//_mixins에 사용될 fontsize map
 $fontsizes: (
     'point-h-01': (
         'font-size': 6.4rem,

@@ -7,6 +7,10 @@
 /**
     *Color function
 */
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 /**
     *Media Query Mixin
 */
@@ -16,8 +20,10 @@
 /**
     * base
 */
-@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
-html,
+html {
+  font-size: 62.5%;
+}
+
 body,
 div,
 span,
@@ -102,7 +108,6 @@ video {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font-size: 62.5%;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -198,6 +203,39 @@ main {
   .logo.desktop {
     display: none;
   }
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
+.header-navigation-anchor-list {
+  position: relative;
+  display: flex;
+  margin-right: 32px;
+  gap: 40px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .header-navigation-anchor-list {
+    display: none;
+  }
+}
+
+.header-navigation-anchor a {
+  transition: 0.25s;
+}
+.header-navigation-anchor a:hover {
+  color: #dfba37;
 }
 
 /*# sourceMappingURL=main.css.map */
