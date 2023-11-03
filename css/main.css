@@ -160,12 +160,44 @@ a:active {
     *Color function
 */
 header {
-  padding: 0 32px;
+  width: 100%;
   height: 85px;
   background-color: #333333;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+main {
+  padding-top: 85px;
+}
+
+/**
+    * components
+*/
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+.logo {
+  margin-left: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 600px) {
+  .logo.mobile {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .logo.desktop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

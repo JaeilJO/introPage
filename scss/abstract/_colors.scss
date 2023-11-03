@@ -1,5 +1,5 @@
 // color Platte
-@import './functions';
+@use './functions';
 
 $palettes: (
     gray: (
@@ -28,24 +28,10 @@ $palettes: (
     ),
 );
 
-//Gray Colors
-$gray-10: hsl(0, 0, 10%);
-$gray-20: hsl(0, 0, 20%);
-$gray-30: hsl(0, 0, 30%);
-$gray-40: hsl(0, 0, 40%);
-$gray-50: hsl(0, 0, 50%);
-$gray-60: hsl(0, 0, 60%);
-$gray-70: hsl(0, 0, 70%);
-$gray-80: hsl(0, 0, 80%);
-$gray-90: hsl(0, 0, 90%);
-
-//DFBA Colors
-$dfba-37: hsl(47, 72%, 55%);
-
 // used Colors
-$background-color: get-color(gray, 300);
-$background-color-darken: get-color(gray, 500);
-$text-color: get-color(white, 100);
-$primary: get-color(yellow, 400);
-$primary-hover: get-color(yellow, 100);
-$faded-color: get-color(gray, 200);
+$background-color: functions.get-color($palettes, gray, 300);
+$background-color-darken: functions.get-color($palettes, gray, 500);
+$text-color: functions.get-color($palettes, white, 100);
+$primary: functions.get-color($palettes, yellow, 400);
+$primary-hover: functions.get-color($palettes, yellow, 100);
+$faded-color: functions.get-color($palettes, gray, 200);

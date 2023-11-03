@@ -31,3 +31,10 @@ $breakpoint: 600px;
         letter-spacing: $letter-spacing;
     }
 }
+
+@mixin none-drag {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

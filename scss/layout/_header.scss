@@ -1,10 +1,13 @@
-@import '../abstract/variables';
-@import '../abstract/colors';
+@use '../abstract/variables';
+@use '../abstract/colors';
 
 header {
-    padding: 0 $side-padding;
-    height: $header-height;
-    background-color: $background-color;
+    width: variables.$header-width;
+    height: variables.$header-height;
+
+    background-color: colors.$background-color;
+    position: fixed;
+
     display: flex;
     justify-content: space-between;
     align-items: center;

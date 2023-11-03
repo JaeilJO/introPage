@@ -1,6 +1,6 @@
 /**
     *Color function
 */
-@function get-color($color, $shade) {
+@function get-color($palettes, $color, $shade) {
     @return map-get(map-get($palettes, $color), $shade);
 }
