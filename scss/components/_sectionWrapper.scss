@@ -1,0 +1,13 @@
+@use '../abstract/variables';
+.section-wrapper {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: 1200px;
+    min-height: variables.$section-min-height;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

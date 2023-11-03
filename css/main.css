@@ -198,12 +198,10 @@ main {
 section {
   background-color: #333333;
   padding: 80px 32px;
+  min-height: 615px;
 }
 section:nth-child(even) {
   background-color: #282828;
-}
-section:first-child {
-  height: calc(100vh - 85px);
 }
 
 /**
@@ -292,6 +290,22 @@ section:first-child {
   height: 4px;
   border-radius: 3px;
   background-color: #fff;
+}
+
+.section-wrapper {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  max-width: 1200px;
+  min-height: 615px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lottie-box {
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */

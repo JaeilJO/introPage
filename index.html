@@ -30,16 +30,24 @@
         <!-- Main 영역 -->
         <main>
             <!-- Main Section -->
-            <section class="fullsize" id="main-section">
-                <div class="main-section-contents">
-                    <div class="main-title">Hi! I'm Jaeil</div>
-                    <div class="sub-title">Introducing Page</div>
+            <section>
+                <div class="section-wrapper">
+                    <div class="lottie-box">
+                        <lottie-player
+                            src="./asset/lottieJson/main.json"
+                            background="transparent"
+                            speed="1"
+                            direction="1"
+                            mode="normal"
+                            autoplay
+                        ></lottie-player>
+                    </div>
                 </div>
             </section>
 
             <!-- About Section -->
-            <section id="about-section">
-                <div class="about-section-wrapper">
+            <section>
+                <div class="section-wrapper">
                     <div class="title">About Me</div>
                     <ul class="about-section-contents">
                         <li class="about-section-content">
@@ -805,5 +813,6 @@
                 </li>
             </ul>
         </footer>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </body>
 </html>
