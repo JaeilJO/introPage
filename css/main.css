@@ -1,3 +1,22 @@
+/**
+    * Abstract
+*/
+/**
+    *Color function
+*/
+/**
+    *Color function
+*/
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    * base
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 html,
 body,
 div,
@@ -103,7 +122,6 @@ section {
 
 body {
   line-height: 1;
-  background-color: #333333;
 }
 
 ol,
@@ -126,12 +144,28 @@ q:after {
 
 a {
   text-decoration: none;
-  outline: none;
+  color: #fff;
 }
 
 a:hover,
 a:active {
   text-decoration: none;
+  color: #fff;
 }
 
-/*# sourceMappingURL=global.css.map */
+/**
+    * layout
+*/
+/**
+    *Color function
+*/
+header {
+  padding: 0 32px;
+  height: 85px;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

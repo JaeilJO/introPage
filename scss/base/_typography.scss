@@ -67,19 +67,3 @@ $fontsizes: (
         'font-family': map-get($font-families, 'roboto-condensed'),
     ),
 );
-
-@mixin typograph($style) {
-    $style-info: map-get($fontsizes, $style);
-
-    @if $style-info {
-        $font-size: map-get($style-info, 'font-size');
-        $font-weight: map-get($style-info, 'font-weight');
-        $font-family: map-get($style-info, 'font-family');
-        $letter-spacing: map-get($style-info, 'letter-spacing');
-
-        font-size: $font-size;
-        font-weight: $font-weight;
-        font-family: $font-family, sans-serif;
-        letter-spacing: $letter-spacing;
-    }
-}

@@ -1,0 +1,11 @@
+@import '../abstract/variables';
+@import '../abstract/colors';
+
+header {
+    padding: 0 $side-padding;
+    height: $header-height;
+    background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

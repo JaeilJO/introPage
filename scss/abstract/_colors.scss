@@ -1,4 +1,6 @@
 // color Platte
+@import './functions';
+
 $palettes: (
     gray: (
         100: #707070,
@@ -40,15 +42,10 @@ $gray-90: hsl(0, 0, 90%);
 //DFBA Colors
 $dfba-37: hsl(47, 72%, 55%);
 
-//function
-@function get-color($color, $shade) {
-    @return map-get(map-get($palettes, $color), $shade);
-}
-
 // used Colors
-$base-color: get-color(gray, 300);
-$base-color-darken: get-color(gray, 500);
-$white-color: get-color(white, 100);
+$background-color: get-color(gray, 300);
+$background-color-darken: get-color(gray, 500);
+$text-color: get-color(white, 100);
 $primary: get-color(yellow, 400);
 $primary-hover: get-color(yellow, 100);
 $faded-color: get-color(gray, 200);
