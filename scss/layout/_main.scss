@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/colors';
 main {
     padding-top: variables.$header-height;
 }

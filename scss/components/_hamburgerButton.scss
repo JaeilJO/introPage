@@ -13,8 +13,8 @@
 }
 
 .hamburger-bar {
-    width: 24px;
-    height: 4px;
-    border-radius: 3px;
+    width: variables.$hamburger-width;
+    height: variables.$hamburger-height;
+    border-radius: variables.$hamburger-border-radius;
     background-color: colors.$text-color;
 }

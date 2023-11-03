@@ -185,8 +185,25 @@ header {
   align-items: center;
 }
 
+/**
+    *Color function
+*/
 main {
   padding-top: 85px;
+}
+
+/**
+    *Color function
+*/
+section {
+  background-color: #333333;
+  padding: 80px 32px;
+}
+section:nth-child(even) {
+  background-color: #282828;
+}
+section:first-child {
+  height: calc(100vh - 85px);
 }
 
 /**
