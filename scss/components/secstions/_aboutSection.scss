@@ -1,6 +1,7 @@
 @use '../../abstract/mixins';
 @use '../../abstract/variables';
 
+// about section의 ul tag
 .about-section-contents {
     display: flex;
 
@@ -17,6 +18,7 @@
     }
 }
 
+// about section li tag
 .about-section-content {
     display: flex;
     align-items: center;

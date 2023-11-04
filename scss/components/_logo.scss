@@ -1,19 +1,23 @@
 @use '../abstract/variables';
 @use '../abstract/mixins';
 
-.logo {
+%common-styles {
     //fixed속성 때문에 header에 padding이 안들어가서 margin으로 대체
     margin-left: variables.$side-padding;
 
     //drag 방지
     @include mixins.none-drag;
+}
 
-    &.mobile {
+.logo {
+    &--mobile {
+        @extend %common-styles;
         @include mixins.large {
             display: none;
         }
     }
-    &.desktop {
+    &--desktop {
+        @extend %common-styles;
         @include mixins.small {
             display: none;
         }

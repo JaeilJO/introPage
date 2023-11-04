@@ -18,6 +18,7 @@
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/section';
+@import 'layout/footer';
 
 /**
     * components
@@ -26,5 +27,9 @@
 @import 'components/navigation';
 @import 'components/hamburgerButton';
 @import 'components/sectionWrapper';
+@import 'components/divider.scss';
 @import 'components/secstions/mainSection';
 @import 'components/secstions/aboutSection';
+@import 'components/secstions/skillsSection';
+@import 'components/secstions/projectSection';
+@import 'components/secstions/contectSection';
