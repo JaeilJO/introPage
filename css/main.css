@@ -12,6 +12,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 /**
     *Media Query Mixin
 */
@@ -183,6 +185,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 999999;
 }
 
 /**
@@ -198,10 +201,12 @@ main {
 section {
   background-color: #333333;
   padding: 80px 32px;
-  min-height: 615px;
 }
 section:nth-child(even) {
   background-color: #282828;
+}
+section:first-child {
+  height: calc(var(--vh, 1vh) * 100 - 85px - 160px);
 }
 
 /**
@@ -292,20 +297,102 @@ section:nth-child(even) {
   background-color: #fff;
 }
 
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
 .section-wrapper {
   position: relative;
   transform: translateX(-50%);
   left: 50%;
   max-width: 1200px;
-  min-height: 615px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  .section-wrapper .title {
+    font-size: 6.4rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.192rem;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .section-wrapper .title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.108rem;
+    margin-bottom: 64px;
+  }
 }
 
 .lottie-box {
   position: absolute;
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+.about-section-contents {
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 600px) {
+  .about-section-contents {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .about-section-contents {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.about-section-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+}
+.about-section-content .icon-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background-color: white;
+}
+@media (min-width: 600px) {
+  .about-section-content {
+    width: 300px;
+    flex-direction: column;
+  }
+  .about-section-content .subscribe {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .about-section-content .subscribe {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

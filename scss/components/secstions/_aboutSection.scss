@@ -1,0 +1,47 @@
+@use '../../abstract/mixins';
+@use '../../abstract/variables';
+
+.about-section-contents {
+    display: flex;
+
+    //아이템끼리 겹치는 것을 방지하기위해서 넣은 것
+    gap: variables.$about-section-gap;
+    @include mixins.large {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @include mixins.small {
+        flex-direction: column;
+        gap: variables.$about-section-gap;
+    }
+}
+
+.about-section-content {
+    display: flex;
+    align-items: center;
+    gap: variables.$about-section-gap;
+    @include mixins.typography('sh-02');
+
+    .icon-box {
+        width: variables.$icon-box-width;
+        height: variables.$icon-box-hegiht;
+        border-radius: 10px;
+        flex-shrink: 0;
+        background-color: white;
+    }
+
+    @include mixins.large {
+        width: 300px;
+        flex-direction: column;
+        .subscribe {
+            text-align: center;
+        }
+    }
+
+    @include mixins.small {
+        .subscribe {
+            text-align: left;
+        }
+    }
+}

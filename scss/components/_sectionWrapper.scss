@@ -1,13 +1,26 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
+@use '../abstract/colors';
 .section-wrapper {
     position: relative;
     transform: translateX(-50%);
     left: 50%;
     max-width: 1200px;
-    min-height: variables.$section-min-height;
+    height: 100%;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: colors.$text-color;
+
+    .title {
+        @include mixins.large {
+            @include mixins.typography('point-h-01');
+            margin-bottom: variables.$section-title-margin-bottom-large;
+        }
+        @include mixins.small {
+            @include mixins.typography('point-h-03');
+            margin-bottom: variables.$section-title-margin-bottom-small;
+        }
+    }
 }

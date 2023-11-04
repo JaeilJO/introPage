@@ -7,6 +7,12 @@ section {
         background-color: colors.$background-color-darken;
     }
 
+    //첫번째 배너만 100vh height 적용 나머지는 100% height 유지
+    &:first-child {
+        // 모바일 환경을 위해서 javascript로 계산한 viewport를 계산한 값 - 헤더값 - 패딩값
+        // 컨텐츠를 항상 정중앙에 위치시키기 위한 계산
+        height: calc((var(--vh, 1vh) * 100) - variables.$header-height - (variables.$top-bottom-padding * 2));
+    }
+
     padding: variables.$section-padding;
-    min-height: variables.$section-min-height;
 }
