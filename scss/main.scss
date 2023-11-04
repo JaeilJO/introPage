@@ -1,0 +1,35 @@
+/**
+    * Abstract
+*/
+@import 'abstract/colors';
+@import 'abstract/functions';
+@import 'abstract/mixins';
+@import 'abstract/variables';
+
+/**
+    * base
+*/
+@import 'base/reset';
+@import 'base/typography';
+
+/**
+    * layout
+*/
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/section';
+@import 'layout/footer';
+
+/**
+    * components
+*/
+@import 'components/logo.scss';
+@import 'components/navigation';
+@import 'components/hamburgerButton';
+@import 'components/sectionWrapper';
+@import 'components/divider.scss';
+@import 'components/secstions/mainSection';
+@import 'components/secstions/aboutSection';
+@import 'components/secstions/skillsSection';
+@import 'components/secstions/projectSection';
+@import 'components/secstions/contectSection';

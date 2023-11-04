@@ -1,0 +1,8 @@
+@use '../abstract/colors';
+
+hr {
+    border: 1px dashed colors.$faded-color;
+    width: 40px;
+    margin: 120px 0;
+    position: relative;
+}

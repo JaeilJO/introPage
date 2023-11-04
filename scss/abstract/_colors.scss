@@ -1,0 +1,37 @@
+// color Platte
+@use './functions';
+
+$palettes: (
+    gray: (
+        100: #707070,
+        200: #5b5b5b,
+        300: #333333,
+        400: #2d2d2d,
+        500: #282828,
+        600: #232323,
+        700: #1e1e1e,
+    ),
+    white: (
+        100: #fff,
+    ),
+    yellow: (
+        100: #e8ce73,
+        200: #e5c75e,
+        300: #e2c04b,
+        400: #dfba37,
+        500: #c8a731,
+        600: #b2942c,
+        700: #9c8226,
+    ),
+    light-gray: (
+        100: #e2e2e2,
+    ),
+);
+
+// used Colors
+$background-color: functions.get-color($palettes, gray, 300);
+$background-color-darken: functions.get-color($palettes, gray, 500);
+$text-color: functions.get-color($palettes, white, 100);
+$primary: functions.get-color($palettes, yellow, 400);
+$primary-hover: functions.get-color($palettes, yellow, 100);
+$faded-color: functions.get-color($palettes, gray, 200);

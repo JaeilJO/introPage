@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/css/global.css" />
-        <link rel="stylesheet" href="/css/main_style.css" />
+        <link rel="stylesheet" href="/css/main.css" />
     </head>
     <body>
         <!-- Header영역 -->
         <header>
-            <img class="logo-desktop" src="/asset/Icon/LogoDeskTop.svg" alt="Logo" />
-            <img class="logo-mobile" src="/asset/Icon/LogoMobile.svg" alt="Logo Mobile" />
+            <img class="logo--desktop" src="/asset/Icon/LogoDeskTop.svg" alt="Logo" />
+            <img class="logo--mobile" src="/asset/Icon/LogoMobile.svg" alt="Logo Mobile" />
             <nav>
-                <ul>
-                    <li><a href="#about-section">about</a></li>
-                    <li><a href="#skills-section">skills</a></li>
-                    <li><a href="#project-section">project</a></li>
-                    <li><a href="#contect-section">contect</a></li>
+                <ul class="header-navigation-anchor-list">
+                    <li class="header-navigation-anchor"><a href="#about">about</a></li>
+                    <li class="header-navigation-anchor"><a href="#skills">skills</a></li>
+                    <li class="header-navigation-anchor"><a href="#project">project</a></li>
+                    <li class="header-navigation-anchor"><a href="#contect">contect</a></li>
                 </ul>
             </nav>
             <button class="hamburger-button">
@@ -28,18 +28,26 @@
         </header>
 
         <!-- Main 영역 -->
-        <miain>
+        <main>
             <!-- Main Section -->
-            <section id="main-section">
-                <div class="main-section-contents">
-                    <div class="main-title">Hi! I'm Jaeil</div>
-                    <div class="sub-title">Introducing Page</div>
+            <section>
+                <div class="section-wrapper">
+                    <div class="lottie-box">
+                        <lottie-player
+                            src="./asset/lottieJson/main.json"
+                            background="transparent"
+                            speed="1"
+                            direction="1"
+                            mode="normal"
+                            autoplay
+                        ></lottie-player>
+                    </div>
                 </div>
             </section>
 
             <!-- About Section -->
-            <section id="about-section">
-                <div class="about-section-wrapper">
+            <section id="about">
+                <div class="section-wrapper">
                     <div class="title">About Me</div>
                     <ul class="about-section-contents">
                         <li class="about-section-content">
@@ -59,13 +67,13 @@
             </section>
 
             <!-- Skill Section -->
-            <section id="skills-section">
-                <div class="skills-section-contents">
+            <section id="skills">
+                <div class="section-wrapper">
                     <div class="title">Skills</div>
                     <!-- Front Content -->
-                    <div class="skills-section-content">
-                        <div class="skills-section-content-title">Front</div>
-                        <ul class="content-grid">
+                    <div class="skills-section-contents">
+                        <div class="skills-section-contents-title">Front</div>
+                        <ul class="skills-grid">
                             <li>
                                 <div class="content-item-icon-box">
                                     <!-- icon svg -->
@@ -482,9 +490,9 @@
                     <hr />
 
                     <!-- Design Section -->
-                    <div class="skills-section-content">
-                        <div class="skills-section-content-title">Design</div>
-                        <ul class="content-grid">
+                    <div class="skills-section-contents">
+                        <div class="skills-section-contents-title">Design</div>
+                        <ul class="skills-grid">
                             <!-- Figma Icon -->
                             <li>
                                 <div class="content-item-icon-box">
@@ -548,9 +556,9 @@
                     <hr />
 
                     <!-- ETC Content -->
-                    <div class="skills-section-content">
-                        <div class="skills-section-content-title">ETC</div>
-                        <ul class="content-grid">
+                    <div class="skills-section-contents">
+                        <div class="skills-section-contents-title">ETC</div>
+                        <ul class="skills-grid">
                             <!-- Express Icon  -->
                             <li>
                                 <div class="content-item-icon-box">
@@ -676,8 +684,8 @@
             </section>
 
             <!-- ProjectSection -->
-            <section id="project-section">
-                <div class="project-section-wrapper">
+            <section id="project">
+                <div class="section-wrapper">
                     <div class="title">Project</div>
                     <ul class="project-section-contents">
                         <!-- Left Content -->
@@ -690,8 +698,8 @@
                             <!-- project informations -->
                             <div class="project-information">
                                 <div class="project-information-title">Title</div>
-                                <div class="project-infromation-box">
-                                    <div class="porject-information-subtitle">Used Skills</div>
+                                <div class="project-information-box">
+                                    <div class="project-information-subtitle">Used Skills</div>
                                     <ul class="used-skills">
                                         <li class="used-skill">HTML</li>
                                         <li class="used-skill">CSS</li>
@@ -704,63 +712,22 @@
                                         <li class="used-skill">JavaScript</li>
                                     </ul>
                                 </div>
-                                <div class="project-infromation-box">
-                                    <div class="porject-information-subtitle">URL</div>
-                                    <a href="" class="porjectionformation-url">www.ww</a>
+                                <div class="project-information-box">
+                                    <div class="project-information-subtitle">URL</div>
+                                    <a href="" class="project-information-url">www.ww</a>
                                 </div>
-                                <div class="project-infromation-box">
-                                    <div class="porject-information-subtitle">Description</div>
+                                <div class="project-information-box">
+                                    <div class="project-information-subtitle">Description</div>
                                     <div class="porjectionformation-description"></div>
                                 </div>
                             </div>
-                        </li>
-
-                        <hr />
-
-                        <!-- Right Project -->
-                        <li class="project-section-content right">
-                            <!-- project images -->
-                            <div class="project-images">
-                                <div class="project-image">
-                                    <img src="" alt="" />
-                                </div>
-                            </div>
-
-                            <!-- project informations -->
-                            <ul class="project-informations">
-                                <li class="project-information">
-                                    <div class="project-information-title">Title</div>
-                                    <div class="project-infromation-box">
-                                        <div class="porject-information-subtitle">Used Skills</div>
-                                        <ul class="used-skills">
-                                            <li class="used-skill">HTML</li>
-                                            <li class="used-skill">CSS</li>
-
-                                            <li class="used-skill">JavaScript</li>
-                                            <li class="used-skill">JavaScript</li>
-                                            <li class="used-skill">JavaScript</li>
-                                            <li class="used-skill">JavaScript</li>
-                                            <li class="used-skill">JavaScript</li>
-                                            <li class="used-skill">JavaScript</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-infromation-box">
-                                        <div class="porject-information-subtitle">URL</div>
-                                        <a href="" class="porjectionformation-url">www.ww</a>
-                                    </div>
-                                    <div class="project-infromation-box">
-                                        <div class="porject-information-subtitle">Description</div>
-                                        <div class="porjectionformation-description"></div>
-                                    </div>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
             </section>
 
             <!-- Contect Section -->
-            <section id="contect-section">
+            <section id="contect">
                 <div class="contect-section-contents">
                     <div class="contect-section-content-title">
                         <div class="title">Contact</div>
@@ -777,20 +744,20 @@
                     </div>
                 </div>
             </section>
-        </miain>
+        </main>
 
         <footer>
             <img src="asset/Icon/LogoDeskTop.svg" alt="logo" />
             <div class="footer-description">
                 This is my introducing page <br />
-                This page was created using pure HTML, CSS, and TypeScript
+                This page was created using HTML, Sass, and TypeScript
             </div>
             <nav class="footer-navigation">
                 <ul class="footer-navigation">
-                    <li class="footer-navigation-anchor"><a href="">skills</a></li>
-                    <li class="footer-navigation-anchor"><a href="">projects</a></li>
-                    <li class="footer-navigation-anchor"><a href="">about</a></li>
-                    <li class="footer-navigation-anchor"><a href="">contact</a></li>
+                    <li class="footer-navigation-anchor"><a href="#skills">skills</a></li>
+                    <li class="footer-navigation-anchor"><a href="#projects">projects</a></li>
+                    <li class="footer-navigation-anchor"><a href="#about">about</a></li>
+                    <li class="footer-navigation-anchor"><a href="#contact">contact</a></li>
                 </ul>
             </nav>
             <ul class="footer-sns-link-list">
@@ -805,5 +772,7 @@
                 </li>
             </ul>
         </footer>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>

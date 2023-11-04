@@ -1,0 +1,67 @@
+@use '../../abstract/mixins';
+@use '../../abstract/colors';
+
+@keyframes fillAnimation {
+    0% {
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.skills-section-contents {
+    width: 100%;
+
+    .skills-section-contents-title {
+        @include mixins.typography('point-h-02');
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    li {
+        .content-item-icon-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            &:hover .stroke {
+                display: block;
+                .stroke-path {
+                    animation: fillAnimation 0.35s cubic-bezier(0.85, -0.01, 0.23, 1) forwards;
+                }
+            }
+
+            .icon {
+                position: relative;
+                z-index: 1;
+                stroke: colors.$text-color;
+                width: 120px;
+            }
+
+            .stroke {
+                z-index: 0;
+                top: -20px;
+                left: 50%;
+                width: 250px;
+                transform: translateX(-50%);
+                position: absolute;
+                .stroke-path {
+                    fill: colors.$primary;
+                    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+                }
+            }
+        }
+        .content-item-title {
+            color: colors.$text-color;
+            text-align: center;
+            @include mixins.typography('sh-01');
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+@use '../abstract/colors';
+
+.header-navigation-anchor-list {
+    position: relative;
+    display: flex;
+
+    margin-right: variables.$side-padding;
+    gap: variables.$navigation-item-gap;
+
+    @include mixins.typography('sh-02');
+    text-transform: uppercase;
+
+    @include mixins.small {
+        display: none;
+    }
+}
+
+.header-navigation-anchor {
+    a {
+        transition: 0.25s;
+        &:hover {
+            color: colors.$primary;
+        }
+    }
+}

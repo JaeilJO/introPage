@@ -1,0 +1,16 @@
+@use '../abstract/variables';
+@use '../abstract/colors';
+
+header {
+    width: variables.$header-width;
+    height: variables.$header-height;
+
+    background-color: colors.$background-color;
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 999999;
+}

@@ -1,0 +1,20 @@
+@use '../abstract/mixins';
+@use '../abstract/colors';
+@use '../abstract/variables';
+.hamburger-button {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: variables.$side-padding;
+
+    @include mixins.large {
+        display: none;
+    }
+}
+
+.hamburger-bar {
+    width: variables.$hamburger-width;
+    height: variables.$hamburger-height;
+    border-radius: variables.$hamburger-border-radius;
+    background-color: colors.$text-color;
+}

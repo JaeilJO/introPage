@@ -1,0 +1,96 @@
+@use '../../abstract/colors';
+@use '../../abstract/mixins';
+
+.project-section-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+
+    @include mixins.small {
+        flex-direction: column;
+        gap: 28px;
+        align-items: center;
+    }
+}
+
+.project-image {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: colors.$text-color;
+    border-radius: 20px;
+    transition: 0.25s;
+    flex-shrink: 0;
+    @include mixins.large {
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(30deg) translateZ(100px);
+
+        &:hover {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+    }
+
+    @include mixins.small {
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.project-information {
+    .project-information-title {
+        @include mixins.typography('point-h-02');
+        color: colors.$text-color;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-information-box {
+    max-width: 300px;
+
+    .project-information-subtitle {
+        margin-bottom: 8px;
+        @include mixins.typography('sh-01');
+    }
+}
+
+.used-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    .used-skill {
+        background-color: colors.$primary;
+        padding: 4px 8px;
+        border-radius: 4px;
+        @include mixins.typography('sh-02');
+        @include mixins.none-drag;
+        transition: background-color 0.25s;
+        &:hover {
+            background-color: colors.$primary-hover;
+        }
+    }
+}
+
+.project-information-url {
+    color: colors.$text-color;
+    @include mixins.typography('body-01');
+    transition: color 0.25s;
+    &:hover {
+        color: colors.$primary-hover;
+    }
+}
+
+.project-information-description {
+    color: colors.$text-color;
+    @include mixins.typography('body-01');
+}

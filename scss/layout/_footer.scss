@@ -1,0 +1,72 @@
+@use '../abstract/variables';
+@use '../abstract/colors';
+@use '../abstract/mixins';
+footer {
+    padding: variables.$top-bottom-padding variables.$side-padding;
+    background-color: colors.$background-color-darken;
+    img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+
+        @include mixins.small {
+            left: 0;
+            transform: translateX(0px);
+        }
+    }
+}
+
+.footer-description {
+    text-align: center;
+    @include mixins.typography('body-01');
+    color: colors.$primary;
+    margin-bottom: 60px;
+    line-height: 110%;
+    @include mixins.small {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+}
+
+.footer-navigation {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    .footer-navigation-anchor {
+        a {
+            @include mixins.typography('sh-02');
+            color: colors.$text-color;
+            text-transform: uppercase;
+            &:hover {
+                color: colors.$primary;
+            }
+        }
+    }
+
+    @include mixins.small {
+        justify-content: start;
+    }
+}
+
+.footer-sns-link-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .footer-sns-link {
+        width: 24px;
+        height: 24px;
+        svg {
+            fill: colors.$text-color;
+            &:hover {
+                fill: colors.$primary;
+            }
+        }
+    }
+
+    @include mixins.small {
+        justify-content: left;
+    }
+}
