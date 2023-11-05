@@ -1,0 +1,172 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/colors';
+
+//variables
+$grid-icon-width: 120px;
+$grid-icon-box-height: 180px;
+$grid-item-height: 200px;
+
+/**
+    * Key Frame
+        - Stroke fill Animation
+*/
+@keyframes fillAnimation {
+    0% {
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+/**
+    * Skills List
+*/
+.skills-list {
+    /**
+        * Skills List --Large Version--
+    */
+    @include mixins.large {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+
+        // grid item
+        &__item {
+            position: relative;
+            height: $grid-item-height;
+
+            // icon box
+            &__icon-box {
+                position: relative;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: $grid-icon-box-height;
+
+                //icon
+                &__icon {
+                    width: $grid-icon-width;
+
+                    stroke: colors.$text-color;
+
+                    z-index: 1;
+                    &--fill {
+                        width: $grid-icon-width;
+
+                        z-index: 1;
+
+                        fill: colors.$text-color;
+                    }
+                }
+
+                //stroke
+                &__stroke {
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+
+                    width: 250px;
+
+                    z-index: 0;
+
+                    transform: translateX(-50%);
+
+                    .stroke-path {
+                        fill: colors.$primary;
+                        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+                    }
+                }
+
+                //play stroke animation when hover grid iconbox
+                &:hover &__stroke {
+                    .stroke-path {
+                        animation: fillAnimation 0.35s cubic-bezier(0.85, -0.01, 0.23, 1) forwards;
+                    }
+                }
+            }
+
+            //item title
+            &__title {
+                @include mixins.typography('sh-01');
+                color: colors.$text-color;
+                text-align: center;
+            }
+        }
+    }
+
+    /**
+        * Skills List --Small Version--
+    */
+    @include mixins.small {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        // stack item
+        &__item {
+            position: relative;
+            bottom: -50px;
+
+            display: flex;
+            justify-content: space-between;
+
+            background-color: colors.$background-color-darken;
+
+            border-radius: 10px;
+
+            padding: 12px 12px;
+
+            transition: 1s ease-in-out;
+
+            transition-property: bottom, opacity;
+
+            opacity: 0;
+
+            &:not(.not-show) {
+                opacity: 1;
+                bottom: 0px;
+            }
+
+            // icon box
+            &__icon-box {
+                position: relative;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                //icon
+                &__icon {
+                    width: 48px;
+                    z-index: 1;
+
+                    stroke: colors.$primary;
+
+                    &--fill {
+                        width: 48px;
+                        z-index: 1;
+                        fill: colors.$primary;
+                    }
+                }
+
+                //stroke
+                &__stroke {
+                    display: none;
+                }
+            }
+
+            //item title
+            &__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include mixins.typography('sh-01');
+                color: colors.$text-color;
+            }
+        }
+    }
+}

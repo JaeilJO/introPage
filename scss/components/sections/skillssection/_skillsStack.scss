@@ -1,0 +1,12 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/colors';
+
+.skills-list--stack {
+    display: flex;
+    width: 1000px;
+    background-color: red;
+    @include mixins.small {
+        display: none;
+    }
+    gap: 20px;
+}
