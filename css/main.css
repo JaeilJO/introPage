@@ -604,10 +604,15 @@ hr {
   position: relative;
   width: 300px;
   height: 400px;
-  background-color: #fff;
+  border: 2px solid #fff;
+  overflow: hidden;
   border-radius: 20px;
   transition: 0.25s;
   flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (min-width: 600px) {
   .project-image {
@@ -625,6 +630,7 @@ hr {
 }
 
 .project-information {
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   gap: 24px;
