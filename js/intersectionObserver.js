@@ -32,3 +32,23 @@ let projectObserver = new IntersectionObserver(
 
 let projectSection = document.querySelector('#project');
 projectObserver.observe(projectSection);
+
+// skills small-list
+
+let skillsObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            const listItem = entry.target;
+
+            if (entry.isIntersecting) {
+                listItem.classList.remove('not-show');
+            }
+        });
+    },
+    { threshold: 1 }
+);
+let skills = document.querySelectorAll('.skills-list__item');
+
+skills.forEach((skill) => {
+    skillsObserver.observe(skill);
+});

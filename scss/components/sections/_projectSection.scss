@@ -27,7 +27,7 @@
     border: 2px solid colors.$text-color;
     overflow: hidden;
     border-radius: 20px;
-    transition: 0.25s;
+    transition: 0.6s ease-in-out;
     flex-shrink: 0;
 
     @include mixins.none-drag;
