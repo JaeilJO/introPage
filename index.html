@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="/css/global.css" />
+
         <link rel="stylesheet" href="/css/main.css" />
     </head>
     <body>
@@ -30,16 +30,16 @@
         <!-- Main 영역 -->
         <main>
             <!-- Main Section -->
-            <section>
+            <section id="main">
                 <div class="section-wrapper">
                     <div class="lottie-box">
                         <lottie-player
                             src="./asset/lottieJson/main.json"
+                            class="main-animation"
                             background="transparent"
                             speed="1"
                             direction="1"
                             mode="normal"
-                            autoplay
                         ></lottie-player>
                     </div>
                 </div>
@@ -691,25 +691,19 @@
                         <!-- Left Content -->
                         <li class="project-section-content">
                             <!-- project images -->
-                            <div class="project-image">
-                                <img src="" alt="" />
+                            <div class="project-image not-show">
+                                <img src="./asset/projectImages/JaeilJOProjectImage.png" alt="" />
                             </div>
 
                             <!-- project informations -->
                             <div class="project-information">
-                                <div class="project-information-title">Title</div>
+                                <div class="project-information-title">Jaeil JO Introducing Page</div>
                                 <div class="project-information-box">
                                     <div class="project-information-subtitle">Used Skills</div>
                                     <ul class="used-skills">
                                         <li class="used-skill">HTML</li>
-                                        <li class="used-skill">CSS</li>
-                                        <li class="used-skill">Styled Components</li>
-                                        <li class="used-skill">JavaScript</li>
-                                        <li class="used-skill">JavaScript</li>
-                                        <li class="used-skill">JavaScript</li>
-                                        <li class="used-skill">JavaScript</li>
-                                        <li class="used-skill">JavaScript</li>
-                                        <li class="used-skill">JavaScript</li>
+                                        <li class="used-skill">Scss</li>
+                                        <li class="used-skill">TypeScript</li>
                                     </ul>
                                 </div>
                                 <div class="project-information-box">
@@ -774,5 +768,6 @@
         </footer>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="./js/index.js"></script>
+        <script src="./js/intersectionObserver.js"></script>
     </body>
 </html>
