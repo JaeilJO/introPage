@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="/css/global.css" />
+
         <link rel="stylesheet" href="/css/main.css" />
     </head>
     <body>
@@ -30,16 +30,16 @@
         <!-- Main 영역 -->
         <main>
             <!-- Main Section -->
-            <section>
+            <section id="main">
                 <div class="section-wrapper">
                     <div class="lottie-box">
                         <lottie-player
                             src="./asset/lottieJson/main.json"
+                            class="main-animation"
                             background="transparent"
                             speed="1"
                             direction="1"
                             mode="normal"
-                            autoplay
                         ></lottie-player>
                     </div>
                 </div>
@@ -691,7 +691,7 @@
                         <!-- Left Content -->
                         <li class="project-section-content">
                             <!-- project images -->
-                            <div class="project-image">
+                            <div class="project-image not-show">
                                 <img src="./asset/projectImages/JaeilJOProjectImage.png" alt="" />
                             </div>
 
@@ -768,5 +768,6 @@
         </footer>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="./js/index.js"></script>
+        <script src="./js/intersectionObserver.js"></script>
     </body>
 </html>

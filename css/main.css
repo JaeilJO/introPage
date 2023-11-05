@@ -617,13 +617,26 @@ hr {
 @media (min-width: 600px) {
   .project-image {
     transform-style: preserve-3d;
-    transform: perspective(1000px) rotateY(30deg) translateZ(100px);
+    transform: rotateY(0deg) translateZ(100px);
+    opacity: 0;
+  }
+  .project-image:not(.not-show) {
+    transform: perspective(2000px) rotateY(30deg) translateZ(100px);
+    opacity: 1;
   }
   .project-image:hover {
     transform: rotateY(0deg) translateZ(100px);
   }
 }
 @media (max-width: 600px) {
+  .project-image {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  .project-image:not(.not-show) {
+    opacity: 1;
+    transform: translateY(0px);
+  }
   .project-image:hover {
     transform: translateY(-10px);
   }
@@ -644,7 +657,14 @@ hr {
 }
 
 .project-information-box {
+  position: relative;
+  transition: 0.25s;
   max-width: 300px;
+  transform: translateX(-30px);
+}
+.project-information-box:not(.not-show) {
+  opacity: 1;
+  transform: translateX(0px);
 }
 .project-information-box .project-information-subtitle {
   margin-bottom: 8px;

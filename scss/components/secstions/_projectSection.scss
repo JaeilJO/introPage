@@ -29,17 +29,30 @@
     border-radius: 20px;
     transition: 0.25s;
     flex-shrink: 0;
+
     @include mixins.none-drag;
     @include mixins.large {
         transform-style: preserve-3d;
-        transform: perspective(1000px) rotateY(30deg) translateZ(100px);
-
+        transform: rotateY(0deg) translateZ(100px);
+        opacity: 0;
+        &:not(.not-show) {
+            transform: perspective(2000px) rotateY(30deg) translateZ(100px);
+            opacity: 1;
+        }
         &:hover {
             transform: rotateY(0deg) translateZ(100px);
         }
     }
 
     @include mixins.small {
+        transform: translateY(-50px);
+        opacity: 0;
+
+        &:not(.not-show) {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
         &:hover {
             transform: translateY(-10px);
         }
@@ -51,15 +64,24 @@
         @include mixins.typography('point-h-02');
         color: colors.$text-color;
     }
-    max-width: 800px;
 
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .project-information-box {
+    position: relative;
+    transition: 0.25s;
     max-width: 300px;
+
+    transform: translateX(-30px);
+
+    &:not(.not-show) {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 
     .project-information-subtitle {
         margin-bottom: 8px;
