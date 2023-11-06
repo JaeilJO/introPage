@@ -19,6 +19,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 /**
     *Media Query Mixin
 */
@@ -450,60 +451,6 @@ hr {
 /**
     *Typography Mixin
 */
-.about-section-contents {
-  display: flex;
-  gap: 20px;
-}
-@media (min-width: 600px) {
-  .about-section-contents {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-@media (max-width: 600px) {
-  .about-section-contents {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-.about-section-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: -0.048rem;
-}
-.about-section-content .icon-box {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  background-color: white;
-}
-@media (min-width: 600px) {
-  .about-section-content {
-    width: 300px;
-    flex-direction: column;
-  }
-  .about-section-content .subscribe {
-    text-align: center;
-  }
-}
-@media (max-width: 600px) {
-  .about-section-content .subscribe {
-    text-align: left;
-  }
-}
-
-/**
-    *Media Query Mixin
-*/
-/**
-    *Typography Mixin
-*/
 /**
     *Color function
 */
@@ -660,6 +607,91 @@ hr {
     font-weight: 400;
     font-family: "Dangrek", sans-serif;
     letter-spacing: -0.108rem;
+  }
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *About Section Contents List
+        - <ul> Tag
+*/
+.about-section-contents {
+  display: flex;
+  gap: 80px;
+}
+@media (min-width: 600px) {
+  .about-section-contents {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .about-section-contents {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *About Section Contents Item
+        - <li> Tag
+*/
+.about-section-contents--item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+}
+@media (min-width: 600px) {
+  .about-section-contents--item {
+    flex-direction: column;
+    width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .about-section-contents--item {
+    width: 100%;
+    left: -20px;
+    opacity: 0;
+    transition: 1s;
+    transition-property: left, opacity;
+  }
+  .about-section-contents--item:not(.not-show) {
+    left: 0px;
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+.about-section-contents--item--icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background-color: white;
+}
+@media (min-width: 600px) {
+  .about-section-contents--item--subscribe {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .about-section-contents--item--subscribe {
+    text-align: left;
   }
 }
 
