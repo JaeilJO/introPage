@@ -1,0 +1,59 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/variables';
+
+/**
+    *About Section Contents Item
+        - <li> Tag
+*/
+.about-section-contents--item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mixins.typography('sh-02');
+
+    @include mixins.large {
+        flex-direction: column;
+        width: 300px;
+    }
+
+    @include mixins.small {
+        width: 100%;
+
+        left: -20px;
+
+        opacity: 0;
+
+        transition: 1s;
+        transition-property: left, opacity;
+
+        //small screen에서 item이 보였을때, 왼쪽에서 fade in하는 animation
+        &:not(.not-show) {
+            left: 0px;
+            opacity: 1;
+            bottom: 0px;
+        }
+    }
+
+    // * Icon
+    &--icon {
+        width: variables.$icon-box-width;
+        height: variables.$icon-box-hegiht;
+        border-radius: 10px;
+        flex-shrink: 0;
+        background-color: white;
+    }
+
+    // * Subscribe
+    &--subscribe {
+        @include mixins.large {
+            text-align: center;
+        }
+
+        @include mixins.small {
+            text-align: left;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 // main section Intersection Observer
-
 let mainObserve = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         const mainElement = entry.target;
@@ -15,7 +14,6 @@ let mainSection = document.querySelector('#main');
 mainObserve.observe(mainSection);
 
 // project section Itersection Observer
-
 let projectObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -34,7 +32,6 @@ let projectSection = document.querySelector('#project');
 projectObserver.observe(projectSection);
 
 // skills small-list
-
 let skillsObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -51,4 +48,23 @@ let skills = document.querySelectorAll('.skills-list__item');
 
 skills.forEach((skill) => {
     skillsObserver.observe(skill);
+});
+
+//about items
+let aboutItemObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            const aboutItme = entry.target;
+
+            if (entry.isIntersecting) {
+                aboutItme.classList.remove('not-show');
+            }
+        });
+    },
+    { threshold: 1 }
+);
+let aboutItems = document.querySelectorAll('.about-section-contents--item');
+
+aboutItems.forEach((about) => {
+    aboutItemObserver.observe(about);
 });

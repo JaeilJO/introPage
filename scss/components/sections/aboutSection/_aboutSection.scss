@@ -1,0 +1,23 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/variables';
+
+/**
+    *About Section Contents List
+        - <ul> Tag
+*/
+.about-section-contents {
+    display: flex;
+
+    //아이템끼리 겹치는 것을 방지하기위해서 넣은 것
+    gap: 80px;
+
+    @include mixins.large {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @include mixins.small {
+        flex-direction: column;
+        gap: 80px;
+    }
+}

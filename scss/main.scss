@@ -29,11 +29,14 @@
 @import 'components/sectionWrapper';
 @import 'components/divider.scss';
 @import 'components/sections/mainSection';
-@import 'components/sections/aboutSection';
 
 // * Skills Section
-@import 'components/sections/skillssection/skillsList';
-@import 'components/sections/skillssection/skillsSection';
+@import 'components/sections/skillsSection/skillsList';
+@import 'components/sections/skillsSection/skillsSection';
+
+// * About Section
+@import 'components/sections/aboutSection/aboutSection';
+@import 'components/sections/aboutSection/aboutSectionItem';
 
 @import 'components/sections/projectSection';
 @import 'components/sections/contectSection';
