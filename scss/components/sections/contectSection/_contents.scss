@@ -1,0 +1,19 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/colors';
+
+.contect-section-contents {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 24px;
+    max-width: 1200px;
+    transform: translateX(-50%);
+    left: 50%;
+
+    @include mixins.small {
+        flex-direction: column;
+    }
+}
