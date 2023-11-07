@@ -1,0 +1,58 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/colors';
+
+.contect-section-contents__form {
+    flex-grow: 1;
+    max-width: 800px;
+    @include mixins.small {
+        width: 100%;
+    }
+
+    //form
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    //input, textarea
+    input,
+    textarea {
+        padding: 12px 20px;
+
+        border-radius: 5px;
+        border: 1px solid colors.$faded-color;
+
+        background: none;
+
+        @include mixins.typography('sh-02');
+        color: colors.$primary;
+
+        &::placeholder {
+            color: colors.$text-color;
+        }
+
+        &:focus {
+            outline: 1px solid colors.$primary;
+        }
+    }
+
+    //button
+    button {
+        border: none;
+        border-radius: 5px;
+
+        @include mixins.typography('sh-01');
+        color: colors.$background-color;
+
+        padding: 12px 0;
+
+        background-color: colors.$primary;
+
+        transition: background-color 0.25s;
+
+        &:hover {
+            background-color: colors.$primary-hover;
+        }
+    }
+}

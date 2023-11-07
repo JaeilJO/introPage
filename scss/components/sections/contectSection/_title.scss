@@ -1,0 +1,33 @@
+@use '../../../abstract/mixins';
+@use '../../../abstract/colors';
+
+.contect-section-contents__title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include mixins.none-drag;
+
+    @include mixins.small {
+        text-align: center;
+    }
+
+    .title {
+        color: colors.$text-color;
+        @include mixins.typography('point-h-02');
+        @include mixins.small {
+            @include mixins.typography('point-h-03');
+        }
+    }
+    .subtitle {
+        color: colors.$primary;
+        @include mixins.typography('sh-02');
+        @include mixins.small {
+            @include mixins.typography('body-01');
+        }
+    }
+
+    @include mixins.small {
+        text-align: center;
+    }
+}

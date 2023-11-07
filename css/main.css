@@ -20,6 +20,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 /**
     *Media Query Mixin
 */
@@ -696,6 +698,150 @@ hr {
 }
 
 /**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
+.contect-section-contents {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+@media (max-width: 600px) {
+  .contect-section-contents {
+    flex-direction: column;
+  }
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
+.contect-section-contents__form {
+  flex-grow: 1;
+  max-width: 800px;
+}
+@media (max-width: 600px) {
+  .contect-section-contents__form {
+    width: 100%;
+  }
+}
+.contect-section-contents__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contect-section-contents__form input,
+.contect-section-contents__form textarea {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid #5b5b5b;
+  background: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+  color: #dfba37;
+}
+.contect-section-contents__form input::placeholder,
+.contect-section-contents__form textarea::placeholder {
+  color: #fff;
+}
+.contect-section-contents__form input:focus,
+.contect-section-contents__form textarea:focus {
+  outline: 1px solid #dfba37;
+}
+.contect-section-contents__form button {
+  border: none;
+  border-radius: 5px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.072rem;
+  color: #333333;
+  padding: 12px 0;
+  background-color: #dfba37;
+  transition: background-color 0.25s;
+}
+.contect-section-contents__form button:hover {
+  background-color: #e8ce73;
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
+.contect-section-contents__title {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 600px) {
+  .contect-section-contents__title {
+    text-align: center;
+  }
+}
+.contect-section-contents__title .title {
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 400;
+  font-family: "Dangrek", sans-serif;
+  letter-spacing: -0.144rem;
+}
+@media (max-width: 600px) {
+  .contect-section-contents__title .title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: "Dangrek", sans-serif;
+    letter-spacing: -0.108rem;
+  }
+}
+.contect-section-contents__title .subtitle {
+  color: #dfba37;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.048rem;
+}
+@media (max-width: 600px) {
+  .contect-section-contents__title .subtitle {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: -0.048rem;
+  }
+}
+@media (max-width: 600px) {
+  .contect-section-contents__title {
+    text-align: center;
+  }
+}
+
+/**
     *Color function
 */
 /**
@@ -839,132 +985,6 @@ hr {
   font-weight: 300;
   font-family: "RobotoCondensed", sans-serif;
   letter-spacing: -0.048rem;
-}
-
-/**
-    *Media Query Mixin
-*/
-/**
-    *Typography Mixin
-*/
-/**
-    *Color function
-*/
-.contect-section-contents {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  max-width: 1200px;
-  transform: translateX(-50%);
-  left: 50%;
-}
-@media (max-width: 600px) {
-  .contect-section-contents {
-    flex-direction: column;
-  }
-}
-
-.contect-section-content-title {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-@media (max-width: 600px) {
-  .contect-section-content-title {
-    text-align: center;
-  }
-}
-.contect-section-content-title .title {
-  color: #fff;
-  font-size: 4.8rem;
-  font-weight: 400;
-  font-family: "Dangrek", sans-serif;
-  letter-spacing: -0.144rem;
-}
-@media (max-width: 600px) {
-  .contect-section-content-title .title {
-    font-size: 3.6rem;
-    font-weight: 400;
-    font-family: "Dangrek", sans-serif;
-    letter-spacing: -0.108rem;
-  }
-}
-.contect-section-content-title .subtitle {
-  color: #dfba37;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: -0.048rem;
-}
-@media (max-width: 600px) {
-  .contect-section-content-title .subtitle {
-    font-size: 1.6rem;
-    font-weight: 300;
-    font-family: "RobotoCondensed", sans-serif;
-    letter-spacing: -0.048rem;
-  }
-}
-@media (max-width: 600px) {
-  .contect-section-content-title {
-    text-align: center;
-  }
-}
-
-.contect-section-content-form {
-  flex-grow: 1;
-  max-width: 800px;
-}
-@media (max-width: 600px) {
-  .contect-section-content-form {
-    width: 100%;
-  }
-}
-.contect-section-content-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.contect-section-content-form input,
-.contect-section-content-form textarea {
-  padding: 12px 20px;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: -0.048rem;
-  border-radius: 5px;
-  border: 1px solid #5b5b5b;
-  background: none;
-  color: #fff;
-}
-.contect-section-content-form input::placeholder,
-.contect-section-content-form textarea::placeholder {
-  color: #e8ce73;
-}
-.contect-section-content-form input:focus,
-.contect-section-content-form textarea:focus {
-  outline: 1px solid #dfba37;
-}
-.contect-section-content-form button {
-  border: none;
-  background-color: #dfba37;
-  border-radius: 5px;
-  font-size: 2.4rem;
-  font-weight: 400;
-  font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: -0.072rem;
-  color: #333333;
-  padding: 12px 0;
-  transition: background-color 0.25s;
-}
-.contect-section-content-form button:hover {
-  background-color: #e8ce73;
 }
 
 /*# sourceMappingURL=main.css.map */
