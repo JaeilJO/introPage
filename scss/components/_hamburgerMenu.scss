@@ -1,0 +1,57 @@
+@use '../abstract/mixins';
+@use '../abstract/colors';
+
+$hamburger-menu-height: 612px;
+.hamburger--menu {
+    @include mixins.large {
+        display: none;
+    }
+
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+
+    background-color: colors.$background-color-darken;
+
+    overflow: hidden;
+
+    height: $hamburger-menu-height;
+
+    transform: translateY(0);
+    transition: 0.25s transform cubic-bezier(0, 0, 0, 1);
+
+    &.close {
+        transform: translateY(-$hamburger-menu-height);
+    }
+
+    &--logo {
+        position: relative;
+        margin-bottom: 80px;
+        transform: translateX(-50%);
+        left: 50%;
+        margin-top: 120px;
+    }
+
+    &--navigation-anchor-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 52px;
+
+        li {
+            @include mixins.typography('sh-01');
+            text-transform: uppercase;
+
+            a {
+                transition: 0.25s;
+                transition-property: color;
+            }
+            &:hover a {
+                color: colors.$primary;
+            }
+        }
+    }
+}

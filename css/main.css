@@ -24,6 +24,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto+Condensed:wght@300;400;700&display=swap");
 /**
     *Media Query Mixin
 */
@@ -377,6 +378,8 @@ footer img {
     *Color function
 */
 .hamburger-button {
+  position: relative;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -389,10 +392,22 @@ footer img {
 }
 
 .hamburger-bar {
+  position: relative;
   width: 24px;
   height: 4px;
   border-radius: 3px;
   background-color: #fff;
+  transition: 0.25s;
+}
+.hamburger-bar.close:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.hamburger-bar.close:nth-child(2) {
+  display: none;
+  transform: translateY(4px) rotate(45deg);
+}
+.hamburger-bar.close:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 /**
@@ -447,6 +462,62 @@ hr {
 
 .lottie-box {
   position: absolute;
+}
+
+/**
+    *Media Query Mixin
+*/
+/**
+    *Typography Mixin
+*/
+/**
+    *Color function
+*/
+.hamburger--menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #282828;
+  overflow: hidden;
+  height: 612px;
+  transform: translateY(0);
+  transition: 0.25s transform cubic-bezier(0, 0, 0, 1);
+}
+@media (min-width: 600px) {
+  .hamburger--menu {
+    display: none;
+  }
+}
+.hamburger--menu.close {
+  transform: translateY(-612px);
+}
+.hamburger--menu--logo {
+  position: relative;
+  margin-bottom: 80px;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 120px;
+}
+.hamburger--menu--navigation-anchor-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 52px;
+}
+.hamburger--menu--navigation-anchor-list li {
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: "RobotoCondensed", sans-serif;
+  letter-spacing: -0.072rem;
+  text-transform: uppercase;
+}
+.hamburger--menu--navigation-anchor-list li a {
+  transition: 0.25s;
+  transition-property: color;
+}
+.hamburger--menu--navigation-anchor-list li:hover a {
+  color: #dfba37;
 }
 
 /**
