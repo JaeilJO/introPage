@@ -457,18 +457,6 @@ hr {
     *Color function
 */
 /**
-    * Key Frame
-        - Stroke fill Animation
-*/
-@keyframes fillAnimation {
-  0% {
-    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-/**
     * Skills List
 */
 .skills-list {
@@ -503,23 +491,17 @@ hr {
   }
   .skills-list__item__icon-box__icon--fill {
     width: 120px;
-    z-index: 1;
     fill: #fff;
   }
-  .skills-list__item__icon-box__stroke {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    width: 250px;
-    z-index: 0;
-    transform: translateX(-50%);
+  .skills-list__item__icon-box:hover .skills-list__item__icon-box__icon {
+    transition-property: stroke;
+    transition: 0.25s;
+    stroke: #dfba37;
   }
-  .skills-list__item__icon-box__stroke .stroke-path {
+  .skills-list__item__icon-box:hover .skills-list__item__icon-box__icon--fill {
+    transition-property: fill;
+    transition: 0.25s;
     fill: #dfba37;
-    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
-  }
-  .skills-list__item__icon-box:hover .skills-list__item__icon-box__stroke .stroke-path {
-    animation: fillAnimation 0.35s cubic-bezier(0.85, -0.01, 0.23, 1) forwards;
   }
   .skills-list__item__title {
     font-size: 2.4rem;
@@ -567,9 +549,6 @@ hr {
     width: 48px;
     z-index: 1;
     fill: #dfba37;
-  }
-  .skills-list__item__icon-box__stroke {
-    display: none;
   }
   .skills-list__item__title {
     display: flex;
