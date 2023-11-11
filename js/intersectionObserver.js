@@ -42,7 +42,7 @@ mainObserver.createObserver();
 
 // * Project CallBack Function
 const projectCallBack = (element) => {
-    const projectImage = element.querySelector('.project-image');
+    const projectImage = element.querySelector('.project-section-contents--item--image');
     projectImage.classList.remove('not-show');
 };
 
