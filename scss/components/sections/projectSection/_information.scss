@@ -1,0 +1,83 @@
+@use '../../../abstract/colors';
+@use '../../../abstract/mixins';
+
+.project-section-contents--item--information {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    max-width: 800px;
+
+    /**
+        * Title
+    */
+    &--title {
+        @include mixins.typography('point-h-02');
+        color: colors.$text-color;
+    }
+
+    /**
+        * Details
+            - exclude title
+    */
+    &--details {
+        position: relative;
+
+        max-width: 300px;
+
+        transition: 0.25s;
+
+        transform: translateX(-30px);
+
+        &:not(.not-show) {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        // * Sub Title
+        &--subtitle {
+            margin-bottom: 8px;
+            @include mixins.typography('sh-01');
+        }
+
+        // * Used Skill List
+        &--used-skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            &--item {
+                background-color: colors.$primary;
+
+                padding: 4px 8px;
+
+                border-radius: 4px;
+
+                @include mixins.typography('sh-02');
+
+                @include mixins.none-drag;
+
+                transition: background-color 0.25s;
+                &:hover {
+                    background-color: colors.$primary-hover;
+                }
+            }
+        }
+
+        // * URL
+        &--url {
+            color: colors.$text-color;
+            @include mixins.typography('body-01');
+            transition: color 0.25s;
+            &:hover {
+                color: colors.$primary-hover;
+            }
+        }
+
+        // * Description
+        &--description {
+            color: colors.$text-color;
+            @include mixins.typography('body-01');
+        }
+    }
+}

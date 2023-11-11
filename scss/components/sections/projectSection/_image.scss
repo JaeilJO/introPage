@@ -1,0 +1,51 @@
+@use '../../../abstract/colors';
+@use '../../../abstract/mixins';
+
+$project-image-widht: 300px;
+$project-image-hegiht: 400px;
+
+.project-section-contents--item--image {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: $project-image-widht;
+    height: $project-image-hegiht;
+
+    border: 2px solid colors.$text-color;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.6s ease-in-out;
+
+    @include mixins.none-drag;
+
+    @include mixins.large {
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) translateZ(100px);
+        opacity: 0;
+
+        &:not(.not-show) {
+            transform: perspective(2000px) rotateY(30deg) translateZ(100px);
+            opacity: 1;
+        }
+        &:hover {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+    }
+
+    @include mixins.small {
+        transform: translateY(-50px);
+        opacity: 0;
+
+        &:not(.not-show) {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}

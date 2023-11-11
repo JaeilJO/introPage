@@ -43,4 +43,8 @@
 @import 'components/sections/contectSection/form';
 @import 'components/sections/contectSection/title';
 
-@import 'components/sections/projectSection';
+// * Project Section
+@import 'components/sections/projectSection/contents';
+@import 'components/sections/projectSection/contentItem';
+@import 'components/sections/projectSection/image';
+@import 'components/sections/projectSection/information';
