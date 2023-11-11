@@ -1,70 +1,80 @@
-// main section Intersection Observer
-let mainObserve = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        const mainElement = entry.target;
+class Observer {
+    constructor(element, callback, threshold) {
+        this.element = typeof element === 'object' ? element : document.querySelector(element);
+        this.callback = callback;
+        this.threshold = threshold;
+    }
 
-        const lottiePlayer = mainElement.querySelector('.main-animation');
-        if (entry.isIntersecting) {
-            lottiePlayer.play();
-        }
-    });
-});
+    createObserver() {
+        const options = {
+            threshold: this.threshold,
+        };
 
-let mainSection = document.querySelector('#main');
-mainObserve.observe(mainSection);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const target = entry.target;
 
-// project section Itersection Observer
-let projectObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            const projectSection = entry.target;
-
-            if (entry.isIntersecting) {
-                const projectImage = projectSection.querySelector('.project-image');
-                projectImage.classList.remove('not-show');
-            }
+                if (entry.isIntersecting) {
+                    this.callback(target);
+                }
+            }, options);
         });
-    },
-    { threshold: 0.6 }
-);
+        observer.observe(this.element);
+    }
+}
 
-let projectSection = document.querySelector('#project');
-projectObserver.observe(projectSection);
+/**
+ * Main Observer
+ */
 
-// skills small-list
-let skillsObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            const listItem = entry.target;
+// * Main CallBack Function
+const mainCallback = (element) => {
+    const lottiePlayer = element.querySelector('.main-animation');
+    lottiePlayer.play();
+};
 
-            if (entry.isIntersecting) {
-                listItem.classList.remove('not-show');
-            }
-        });
-    },
-    { threshold: 1 }
-);
-let skills = document.querySelectorAll('.skills-list__item');
+const mainObserver = new Observer('#main', mainCallback, 0.6);
+mainObserver.createObserver();
 
+/**
+ * Project Observer
+ */
+
+// * Project CallBack Function
+const projectCallBack = (element) => {
+    const projectImage = element.querySelector('.project-image');
+    projectImage.classList.remove('not-show');
+};
+
+const projectObserver = new Observer('#project', projectCallBack, 0.6);
+projectObserver.createObserver();
+
+/**
+ * Skills Observer
+ */
+
+// * Skills CallBack Function
+const skillsCallBack = (element) => {
+    const listItem = element;
+    listItem.classList.remove('not-show');
+};
+const skills = document.querySelectorAll('.skills-list__item');
 skills.forEach((skill) => {
-    skillsObserver.observe(skill);
+    const observer = new Observer(skill, skillsCallBack, 1);
+    observer.createObserver();
 });
 
-//about items
-let aboutItemObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            const aboutItme = entry.target;
+/**
+ * About Observer
+ */
 
-            if (entry.isIntersecting) {
-                aboutItme.classList.remove('not-show');
-            }
-        });
-    },
-    { threshold: 1 }
-);
-let aboutItems = document.querySelectorAll('.about-section-contents--item');
-
+// * About CallBack Function
+const aboutCallback = (element) => {
+    const aboutItme = element;
+    aboutItme.classList.remove('not-show');
+};
+const aboutItems = document.querySelectorAll('.about-section-contents--item');
 aboutItems.forEach((about) => {
-    aboutItemObserver.observe(about);
+    const observer = new Observer(about, aboutCallback, 1);
+    observer.createObserver();
 });
