@@ -19,7 +19,6 @@ $hamburger-menu-height: 612px;
 
     height: $hamburger-menu-height;
 
-    transform: translateY(0);
     transition: 0.25s transform cubic-bezier(0, 0, 0, 1);
 
     &.close {
@@ -48,6 +47,9 @@ $hamburger-menu-height: 612px;
             a {
                 transition: 0.25s;
                 transition-property: color;
+                &:target {
+                    padding-top: 300px;
+                }
             }
             &:hover a {
                 color: colors.$primary;
