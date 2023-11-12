@@ -33,15 +33,16 @@ footer {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+
     gap: 10%;
+
     .footer-navigation-anchor {
-        a {
-            @include mixins.typography('sh-02');
-            color: colors.$text-color;
-            text-transform: uppercase;
-            &:hover {
-                color: colors.$primary;
-            }
+        text-transform: uppercase;
+        @include mixins.typography('sh-02');
+        color: colors.$text-color;
+
+        &:hover {
+            color: colors.$primary;
         }
     }
 

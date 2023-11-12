@@ -43,15 +43,14 @@ $hamburger-menu-height: 612px;
         li {
             @include mixins.typography('sh-01');
             text-transform: uppercase;
+            transition: 0.25s;
+            transition-property: color;
 
-            a {
-                transition: 0.25s;
-                transition-property: color;
-                &:target {
-                    padding-top: 300px;
-                }
-            }
-            &:hover a {
+            cursor: pointer;
+
+            color: colors.$text-color;
+
+            &:hover {
                 color: colors.$primary;
             }
         }
