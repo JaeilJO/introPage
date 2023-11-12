@@ -36,16 +36,11 @@ $project-image-hegiht: 400px;
     }
 
     @include mixins.small {
-        transform: translateY(-50px);
         opacity: 0;
 
         &:not(.not-show) {
             opacity: 1;
             transform: translateY(0px);
-        }
-
-        &:hover {
-            transform: translateY(-10px);
         }
     }
 }

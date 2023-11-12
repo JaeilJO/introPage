@@ -18,10 +18,10 @@
 }
 
 .header-navigation-anchor {
-    a {
-        transition: 0.25s;
-        &:hover {
-            color: colors.$primary;
-        }
+    transition: 0.25s;
+    color: colors.$text-color;
+    cursor: pointer;
+    &:hover {
+        color: colors.$primary;
     }
 }
