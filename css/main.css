@@ -480,7 +480,6 @@ hr {
   background-color: #282828;
   overflow: hidden;
   height: 612px;
-  transform: translateY(0);
   transition: 0.25s transform cubic-bezier(0, 0, 0, 1);
 }
 @media (min-width: 600px) {
@@ -515,6 +514,9 @@ hr {
 .hamburger--menu--navigation-anchor-list li a {
   transition: 0.25s;
   transition-property: color;
+}
+.hamburger--menu--navigation-anchor-list li a:target {
+  padding-top: 300px;
 }
 .hamburger--menu--navigation-anchor-list li:hover a {
   color: #dfba37;
