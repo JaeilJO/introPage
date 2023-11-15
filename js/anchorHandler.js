@@ -1,4 +1,4 @@
-function anchorFunc(id) {
+function anchorHandler(id) {
     const section = document.querySelector(`#${id}`);
     const absolutePosition = section.getBoundingClientRect().top + window.scrollY;
     const cordination = absolutePosition - 250;
