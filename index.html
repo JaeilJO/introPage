@@ -12,14 +12,16 @@
         <header>
             <img class="logo--desktop" src="/asset/Icon/LogoDeskTop.svg" alt="Logo" />
             <img class="logo--mobile" src="/asset/Icon/LogoMobile.svg" alt="Logo Mobile" />
+
             <nav>
                 <ul class="header-navigation-anchor-list">
-                    <li class="header-navigation-anchor" onclick='anchorFunc("about")'>about</li>
-                    <li class="header-navigation-anchor" onclick='anchorFunc("skills")' >skills</li>
-                    <li class="header-navigation-anchor" onclick='anchorFunc("project")'>project</li>
-                    <li class="header-navigation-anchor" onclick='anchorFunc("contect")'>contect</li>
+                    <li class="header-navigation-anchor" onclick='anchorHandler("about")'>about</li>
+                    <li class="header-navigation-anchor" onclick='anchorHandler("skills")' >skills</li>
+                    <li class="header-navigation-anchor" onclick='anchorHandler("project")'>project</li>
+                    <li class="header-navigation-anchor" onclick='anchorHandler("contect")'>contect</li>
                 </ul>
             </nav>
+            
             <button class="hamburger-button">
                 <div class="hamburger-bar "></div>
                 <div class="hamburger-bar "></div>
@@ -30,10 +32,10 @@
                 <img src="./asset/Icon/LogoDeskTop.svg" class="hamburger--menu--logo">
                 </img>
                 <ul class="hamburger--menu--navigation-anchor-list">
-                    <li class="hamburger--menu--navigation-anchor" onclick='anchorFunc("about")'>about</li>
-                    <li class="hamburger--menu--navigation-anchor" onclick='anchorFunc("skills")'>skills</li>
-                    <li class="hamburger--menu--navigation-anchor" onclick='anchorFunc("project")'>project</li>
-                    <li class="hamburger--menu--navigation-anchor" onclick='anchorFunc("contect")'>contect</li>
+                    <li class="hamburger--menu--navigation-anchor" onclick='anchorHandler("about")'>about</li>
+                    <li class="hamburger--menu--navigation-anchor" onclick='anchorHandler("skills")'>skills</li>
+                    <li class="hamburger--menu--navigation-anchor" onclick='anchorHandler("project")'>project</li>
+                    <li class="hamburger--menu--navigation-anchor" onclick='anchorHandler("contect")'>contect</li>
                 </ul>
             </div>
         </header>
@@ -694,10 +696,10 @@
             </div>
             <nav class="footer-navigation">
                 <ul class="footer-navigation">
-                    <li class="footer-navigation-anchor" onclick='anchorFunc("skills")'>skills</li>
-                    <li class="footer-navigation-anchor" onclick='anchorFunc("project")'>project</li>
-                    <li class="footer-navigation-anchor" onclick='anchorFunc("about")'>about</li>
-                    <li class="footer-navigation-anchor" onclick='anchorFunc("contect")'>contact</li>
+                    <li class="footer-navigation-anchor" onclick='anchorHandler("skills")'>skills</li>
+                    <li class="footer-navigation-anchor" onclick='anchorHandler("project")'>project</li>
+                    <li class="footer-navigation-anchor" onclick='anchorHandler("about")'>about</li>
+                    <li class="footer-navigation-anchor" onclick='anchorHandler("contect")'>contact</li>
                 </ul>
             </nav>
             <ul class="footer-sns-link-list">
@@ -714,10 +716,10 @@
         </footer>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-        <script type="module" src="./js/index.js"></script>
-        <script type="module" src="./js/intersectionObserver.js"></script>
-        <script src="./js/contectSection.js"></script>
-        <script src="./js/hamburgerButton.js"></script>
-        <script src="./js/scroll.js"></script>
+        <script  src="./js/viewportHeightCalculator.js"></script>
+        <script src="./js/intersectionObserver.js"></script>
+        <script src="./js/contectInputStyleUpdater.js"></script>
+        <script src="./js/hamburgerButtonHandler.js"></script>
+        <script src="./js/anchorHandler.js"></script>
     </body>
 </html>
