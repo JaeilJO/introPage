@@ -1,31 +1,31 @@
 "use strict";
-const hamburgerbutton = document.querySelector('.hamburger-button');
-const hamburgerMenu = document.querySelector('.hamburger--menu');
-const hamburgerAnchors = document.querySelectorAll('.hamburger--menu--navigation-anchor');
+
+var hamburgerbutton = document.querySelector('.hamburger-button');
+var hamburgerMenu = document.querySelector('.hamburger--menu');
+var hamburgerAnchors = document.querySelectorAll('.hamburger--menu--navigation-anchor');
 if (hamburgerbutton) {
-    hamburgerbutton.addEventListener('click', () => {
-        hamburgerbutton.querySelectorAll('.hamburger-bar').forEach((bar) => {
-            let hamburgerButtonStatus = bar.classList.contains('close');
-            if (hamburgerMenu) {
-                if (hamburgerButtonStatus) {
-                    bar.classList.remove('close');
-                    hamburgerMenu.classList.add('close');
-                }
-                else {
-                    bar.classList.add('close');
-                    hamburgerMenu.classList.remove('close');
-                }
-            }
-        });
+  hamburgerbutton.addEventListener('click', function () {
+    hamburgerbutton.querySelectorAll('.hamburger-bar').forEach(function (bar) {
+      var hamburgerButtonStatus = bar.classList.contains('close');
+      if (hamburgerMenu) {
+        if (hamburgerButtonStatus) {
+          bar.classList.remove('close');
+          hamburgerMenu.classList.add('close');
+        } else {
+          bar.classList.add('close');
+          hamburgerMenu.classList.remove('close');
+        }
+      }
     });
-    hamburgerAnchors.forEach((anchor) => {
-        anchor.addEventListener('click', () => {
-            hamburgerbutton.querySelectorAll('.hamburger-bar').forEach((bar) => {
-                bar.classList.remove('close');
-                if (hamburgerMenu) {
-                    hamburgerMenu.classList.add('close');
-                }
-            });
-        });
+  });
+  hamburgerAnchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function () {
+      hamburgerbutton.querySelectorAll('.hamburger-bar').forEach(function (bar) {
+        bar.classList.remove('close');
+        if (hamburgerMenu) {
+          hamburgerMenu.classList.add('close');
+        }
+      });
     });
+  });
 }

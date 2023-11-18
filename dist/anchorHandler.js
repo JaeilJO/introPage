@@ -1,10 +1,15 @@
 "use strict";
+
 function anchorHandler(id) {
-    const section = document.querySelector(`#${id}`);
-    if (section === null) {
-        return;
-    }
-    const absolutePosition = section.getBoundingClientRect().top + window.scrollY;
-    const cordination = absolutePosition - 250;
-    window.scrollTo({ top: cordination, left: 0, behavior: 'smooth' });
+  var section = document.querySelector("#".concat(id));
+  if (!section) {
+    return;
+  }
+  var absolutePosition = section.getBoundingClientRect().top + window.scrollY;
+  var cordination = absolutePosition - 250;
+  window.scrollTo({
+    top: cordination,
+    left: 0,
+    behavior: 'smooth'
+  });
 }
