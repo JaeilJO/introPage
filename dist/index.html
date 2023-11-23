@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
 
-        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="./css/main.css" />
     </head>
     <body>
         <!-- Header영역 -->
         <header>
-            <img class="logo--desktop" src="/asset/Icon/LogoDeskTop.svg" alt="Logo" />
-            <img class="logo--mobile" src="/asset/Icon/LogoMobile.svg" alt="Logo Mobile" />
+            <img class="logo--desktop" src="./assets/Icon/LogoDeskTop.svg" alt="Logo" />
+            <img class="logo--mobile" src="./assets/Icon/LogoMobile.svg" alt="Logo Mobile" />
 
             <nav>
                 <ul class="header-navigation-anchor-list">
@@ -29,7 +29,7 @@
             </button>
 
             <div class="hamburger--menu close">
-                <img src="./asset/Icon/LogoDeskTop.svg" class="hamburger--menu--logo">
+                <img src="./assets/Icon/LogoDeskTop.svg" class="hamburger--menu--logo">
                 </img>
                 <ul class="hamburger--menu--navigation-anchor-list">
                     <li class="hamburger--menu--navigation-anchor" onclick='anchorHandler("about")'>about</li>
@@ -51,7 +51,7 @@
                 <div class="section-wrapper">
                     <div class="lottie-box">
                         <lottie-player
-                            src="./asset/lottieJson/main.json"
+                            src="./assets/lottieJson/main.json"
                             class="main-animation"
                             background="transparent"
                             speed="2.5"
@@ -611,7 +611,7 @@
                         <li class="project-section-contents--item">
                             <!-- project images -->
                             <div class="project-section-contents--item--image not-show">
-                                <img src="./asset/projectImages/JaeilJOProjectImage.png" alt="" />
+                                <img src="./assets/projectImages/JaeilJOProjectImage.png" alt="" />
                             </div>
 
                             <!-- project informations -->
@@ -689,7 +689,7 @@
         </main>
 
         <footer>
-            <img src="asset/Icon/LogoDeskTop.svg" alt="logo" />
+            <img src="assets/Icon/LogoDeskTop.svg" alt="logo" />
             <div class="footer-description">
                 This is my introducing page <br />
                 This page was created using HTML, Sass, and TypeScript
@@ -715,11 +715,6 @@
             </ul>
         </footer>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-        <script  src="./dist/viewportHeightCalculator.js"></script>
-        <script src="./dist/intersectionObserver.js"></script>
-        <script src="./dist/contectInputStyleUpdater.js"></script>
-        <script src="./dist/hamburgerButtonHandler.js"></script>
-        <script src="./dist/anchorHandler.js"></script>
+        <script src="bundle.js"></script>
     </body>
 </html>
